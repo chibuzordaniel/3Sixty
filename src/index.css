@@ -1,3 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Gruppo&family=Inter:wght@200;300;400;500;600;700;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Nunito&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Rubik:ital,wght@0,300;0,800;0,900;1,300;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Gruppo&family=Inter:wght@200;300;400;500;600;700;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Nunito&family=Open+Sans:ital,wght@1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Rubik:ital,wght@0,300;0,800;0,900;1,300;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Gruppo&family=Inter:wght@200;300;400;500;600;700;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Nunito&family=Open+Sans:ital,wght@0,700;1,400;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300;1,900&family=Rubik:ital,wght@0,300;0,800;0,900;1,300;1,700;1,800;1,900&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dropdown-menu.active{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+  
+}
+
+.dropdown-menu.active{
+  opacity: 1;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+  
+}
+
+.dropup-menu.active{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+  
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+
+
+.borderline1 {
+  border:  1.5px solid  #356DFB;
+  width: 314px;
+  height: 46px;
+  margin-top: 13px;
+  margin-left: 27px;
+  border-radius: 10px;
+}
+
+.dropup-menu.active{
+  opacity: 1;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+  
+}
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
