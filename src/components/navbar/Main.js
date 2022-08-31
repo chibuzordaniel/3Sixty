@@ -8,9 +8,7 @@ import {Link} from 'react-router-dom'
 function  Main () {
     const  [open,  setOpen] = useState(false);
     const  [on, setOn] =  useState (false)
-   
-
-  
+    
 
 
     return (

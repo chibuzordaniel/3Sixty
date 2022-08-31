@@ -11,6 +11,7 @@ function  Draft () {
 
    const [pop, setPop] = useState(false)
    const [pup, setPup] = useState(false)
+   const [pull, setPull] = useState(false)
     
     return (
         <div className=" bg-primary">
@@ -100,7 +101,7 @@ function  Draft () {
                     <button  className="  bg-bluelight w-64 relative top-1.5  text-white  
                       h-44.5  text-30  rounded-l-full " >+</button>
                     <button  className="  bg-bluedark text-white  w-111 
-                         h-44  text-16   rounded-r-full">Create Note</button>
+                         h-44  text-16   rounded-r-full" onClick={() =>{setPull(!pull)}}>Create Note</button>
                   </div>
                 </div>
             </div>
@@ -110,7 +111,7 @@ function  Draft () {
         <div className=" flex ">
             <div className=" flex">
             <div className="  bg-white w-460 h-650 ">
-              <div className=" overflow-y-scroll  h-580">
+              <div className=" container overflow-y-scroll  h-580">
                     <div className=" border-b-2 pb-19 pl-115">
                         <div>
                             <h1  className=" text-primarylight text-18 font-Roboto font-bold  pt-21 " >10 Hours Fasting every week</h1>
@@ -410,15 +411,43 @@ function  Draft () {
             </div>
         </div>
         </div>
-
-        <div  className=' bg-white  w-454  h-380 shadow-2xl absolute bottom-93 left-580'>
-            <div>
-                <h1>Write a Note</h1>
-                <p><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      
+        <div   className={`dropdown-menu ${pull? 'active' : 'inactive'}`}>
+        <div  className=' bg-white  w-454  h-465 shadow-2xl absolute  -bottom-6 left-580'>
+            <div className=' flex border-b-2 title '>
+                <h1 className=' pl-21  pt-15 font-Roboto font-bold   text-18'>Write a Note</h1>
+                <p className=' pl-292 pt-21' onClick={() =>{setPull(!pull)}}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 0.792678L11.2073 0L6 5.20732L0.792678 0L0 0.792678L5.20732 6L0 11.2073L0.792678 12L6 6.79268L11.2073 12L12 11.2073L6.79268 6L12 0.792678Z" fill="#777777"/>
                     </svg>
                </p>
             </div>
+
+            <div className=' pt-14'>
+                <h3 className='pl-21 pb-1 text-14 font-Roboto font-bold'>Title</h3>
+                <div className=' note   text-14 font-Roboto '>
+                    <input placeholder='note title'></input>
+                </div>
+            </div>
+
+            <div className=' pt-14'>
+                <h3 className='pl-21 pb-1 text-14 font-Roboto font-bold'>Tag</h3>
+                <div className=' note    text-14 font-Roboto '>
+                    <input placeholder='note tag'></input>
+                </div>
+            </div>
+
+             <div className=' pt-14'>
+                <h3 className='pl-21 pb-1 text-14 font-Roboto font-bold'>Note</h3>
+                <div className=' textarea  text-14 font-Roboto '>
+                   <textarea placeholder='note body'></textarea>
+                </div>
+            </div>
+
+            <div className=' text-white text-16 font-Roboto bg-bluedark w-143 h-46 rounded-full pt-10 pl-46 ml-21 mt-21 '>
+                <button >Create</button>
+            </div>
+        </div>
         </div>
       </div>
     )

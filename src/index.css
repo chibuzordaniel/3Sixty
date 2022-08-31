@@ -60,6 +60,51 @@
   
 }
 
+.note{
+  background: rgba(196, 196, 196, 0.05);
+  border: 1px solid #DEDFEC;
+  border-radius: 10px;
+  height: 46px;
+  width: 410px;
+  margin-left: 21px;
+  outline: none;
+  
+}
+
+.note > input{
+  outline: none;
+  background: rgba(196, 196, 196, 0.05);
+  width: 410px;
+  height: 42px;
+  padding-left: 14px;
+}
+
+.textarea{
+  background: rgba(196, 196, 196, 0.05);
+  border: 1px solid #DEDFEC;
+  border-radius: 10px;
+  height: 110px;
+  width: 410px;
+  margin-left: 21px;
+  
+}
+
+.textarea > textarea{
+  background: rgba(196, 196, 196, 0.05);
+  border: 1px solid #DEDFEC;
+  border-radius: 10px;
+  height: 110px;
+  width: 410px;
+  padding-left: 14px;
+  padding-top: 14px;
+  outline: none;
+}
+
+.title{
+  border-bottom: 0.5px solid #DDDDDD;
+  padding-bottom: 15px;
+}
+
 
 
 body {
