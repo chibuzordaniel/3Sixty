@@ -69,6 +69,10 @@
   bottom: 600px;
 }
 
+.card2:hover{
+  color: #356DFB;
+}
+
 .note{
   background: rgba(196, 196, 196, 0.05);
   border: 1px solid #DEDFEC;

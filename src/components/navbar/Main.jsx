@@ -202,7 +202,8 @@ function  Main () {
                            className=" w-314  h-46 ml-26 mt-14  
                            bg rounded-xl  border">
                            <input 
-                              className=" capitalize mt-2 pl-17 font-Roboto  outline-none  w-282" placeholder="Name">
+                             type="name"
+                              className=" capitalize mt-2 pl-17 font-Roboto  outline-none  w-282" placeholder="Name" >
                            </input>
                            
                       </div>
@@ -211,6 +212,7 @@ function  Main () {
                             className=" w-314  h-46 ml-26 
                              font-Roboto mt-17 bg rounded-xl  border">
                             <input 
+                            type="username"
                                className="  capitalize mt-2 pl-17 pt-  outline-none  w-282 " placeholder="Username">                             
                             </input>
                         </div>
@@ -219,6 +221,7 @@ function  Main () {
                             className=" w-314  font-Roboto h-46 ml-26
                              mt-17  bg rounded-xl  border">
                                 <input 
+                                type="email"
                                     className=" capitalize  mt-2 pl-17 outline-none  w-282" placeholder="E-mail">
                                 </input>
                            
@@ -227,6 +230,7 @@ function  Main () {
                         <div 
                             className=" w-314  h-46 ml-26 mt-17  bg rounded-xl  border">
                            <input
+                           type="password"
                               className=" capitalize mt-2 pl-17  outline-none  w-282" placeholder="Password">
                            </input>
                         </div>
@@ -323,6 +327,7 @@ function  Main () {
                                 <div className=" w-314  font-Roboto h-46 ml-26 mt-21
                                   bg rounded-xl  border">
                                    <input 
+                                   type="email"
                                        className=" capitalize  mt-2 pl-17  outline-none  w-282" placeholder="E-mail">
                                    </input>
                                 </div>
@@ -330,6 +335,7 @@ function  Main () {
                                 <div className=" w-314  h-46 ml-26 mt-21 
                                    bg rounded-xl  border">
                                   <input 
+                                  type="password"
                                      className=" capitalize mt-2 pl-17  outline-none  w-282" placeholder="Password" >
                                   </input>
                                 </div>
