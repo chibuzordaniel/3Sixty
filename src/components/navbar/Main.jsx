@@ -6,8 +6,8 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 
 function  Main () {
-    const  [open,  setOpen] = useState(false);
-    const  [on, setOn] =  useState (false)
+    const  [open,  setOpen] = useState(true);
+    const  [on, setOn] =  useState (true)
     
 
 
@@ -202,7 +202,7 @@ function  Main () {
                            className=" w-314  h-46 ml-26 mt-14  
                            bg rounded-xl  border">
                            <input 
-                              className=" mt-2 pl-17 font-Roboto  outline-none  w-282" placeholder="Name">
+                              className=" capitalize mt-2 pl-17 font-Roboto  outline-none  w-282" placeholder="Name">
                            </input>
                            
                       </div>
@@ -211,7 +211,7 @@ function  Main () {
                             className=" w-314  h-46 ml-26 
                              font-Roboto mt-17 bg rounded-xl  border">
                             <input 
-                               className=" mt-2 pl-17 pt-  outline-none  w-282 " placeholder="Username">                             
+                               className="  capitalize mt-2 pl-17 pt-  outline-none  w-282 " placeholder="Username">                             
                             </input>
                         </div>
 
@@ -219,7 +219,7 @@ function  Main () {
                             className=" w-314  font-Roboto h-46 ml-26
                              mt-17  bg rounded-xl  border">
                                 <input 
-                                    className="  mt-2 pl-17 outline-none  w-282" placeholder="E-mail">
+                                    className=" capitalize  mt-2 pl-17 outline-none  w-282" placeholder="E-mail">
                                 </input>
                            
                         </div>
@@ -227,7 +227,7 @@ function  Main () {
                         <div 
                             className=" w-314  h-46 ml-26 mt-17  bg rounded-xl  border">
                            <input
-                              className=" mt-2 pl-17  outline-none  w-282" placeholder="Password">
+                              className=" capitalize mt-2 pl-17  outline-none  w-282" placeholder="Password">
                            </input>
                         </div>
 
@@ -323,14 +323,14 @@ function  Main () {
                                 <div className=" w-314  font-Roboto h-46 ml-26 mt-21
                                   bg rounded-xl  border">
                                    <input 
-                                       className="  mt-2 pl-17  outline-none  w-282" placeholder="E-mail">
+                                       className=" capitalize  mt-2 pl-17  outline-none  w-282" placeholder="E-mail">
                                    </input>
                                 </div>
 
                                 <div className=" w-314  h-46 ml-26 mt-21 
                                    bg rounded-xl  border">
                                   <input 
-                                     className=" mt-2 pl-17  outline-none  w-282" placeholder="Password" >
+                                     className=" capitalize mt-2 pl-17  outline-none  w-282" placeholder="Password" >
                                   </input>
                                 </div>
 

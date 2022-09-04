@@ -48,6 +48,7 @@ module.exports = {
         '25': '25px',
         '46': '46px',
         '52': '52px',
+        '59': '59px',
         '73': '73px',
         '85': '85px',
         '97': '97px',
@@ -55,6 +56,7 @@ module.exports = {
         '180': '180px',
         '580': '580px',
         '465': '465px',
+        '570': '570px',
         '650': '650px',
         '620': '620px',
         '900': '900px',
@@ -64,7 +66,7 @@ module.exports = {
 
       colors: {
         bluelight: ' #507EF5',
-        bluelight: ' #507EF5',
+        blueblack: 'rgba(0, 0, 0, 0.2)',
         ashlight: '  #EEEEEE',
         primarydark: ' #CCCCCC',
         bluelight: ' #507EF5',
@@ -76,6 +78,7 @@ module.exports = {
         primary: ' #E5E5E5',
         secondary: ' #F7FBFD',
         secondarydark: '#C4C4C4',
+        secondarypure: '#DDDDDD',
         
         
       },
@@ -119,6 +122,7 @@ module.exports = {
        '8.9': '8.9px',
        '10': '10px',
        '11': '11px',
+       '11.9': '11.9px',
        '14': '14px',
        '15': '15px',
        '17': '17px',
@@ -157,8 +161,9 @@ module.exports = {
        '374': '374px',
        '420': '420px',
        '450': '450px',
-       '350': '380px',
+       '380': '380px',
        '500': '500px',
+       '530': '530px',
        '580': '580px',
         '600' : '600px',
         '670': '670px',

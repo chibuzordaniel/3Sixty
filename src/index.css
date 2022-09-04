@@ -60,6 +60,15 @@
   
 }
 
+.card-hover:hover{
+  background: #F7FBFD;
+}
+
+.card1{
+  position: relative;
+  bottom: 600px;
+}
+
 .note{
   background: rgba(196, 196, 196, 0.05);
   border: 1px solid #DEDFEC;

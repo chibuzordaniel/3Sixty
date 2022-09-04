@@ -7,7 +7,7 @@ import Input from './input/Input';
 
 function App() {
   return (
-    <div>
+    <>
       <Routes>
 
           <Route path='/' element={<Main />} />
@@ -22,12 +22,12 @@ function App() {
             </Route>
           
 
-        <Route path='/' element={<Input />} />
+        
 
       </Routes>
         
      
-    </div>
+    </>
   );
 }
 
