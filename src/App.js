@@ -11,6 +11,7 @@ function App() {
       <Routes>
 
           <Route path='/' element={<Main />} />
+          <Route path='/' element={<Input />} />
           <Route path='/' element={<Login />} />
           
            <Route path='/3Sixty'>
