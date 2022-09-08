@@ -1,15 +1,21 @@
 import {Link} from 'react-router-dom';
+import Input from '../../input/Input';
 
-
-
+import React, {useState} from 'react';
 
 
 
 
 function Draft () {
+
+    const [drop, setDrop] = useState (true);
+    const [ dropmain, setDropMain] = useState (true)
+    const [ dropup, setDropUp] = useState (true)
+
+
     return(
         <div>
-            <div className=''>
+            <div className='' >
                 <div className=' bg-white  h-59'>
                     <div  className=' pl-[35px] '>
                       <div className=' flex'>
@@ -26,8 +32,8 @@ function Draft () {
                                </spn> 
                             </div>
 
-                            <div className=' py-4 pl-3 text-14'>
-                              <h3>Search notes</h3>
+                            <div className=' py-4 pl-3 text-14 font-Roboto '>
+                              <h3 >Search notes</h3>
                             </div>
                       </div>
                     </div>
@@ -47,8 +53,8 @@ function Draft () {
                                         <path d="M0 0V21H21V0H0ZM19.5 19.3846H1.5V1.61538H19.5V19.3846Z" fill="#356DFB"/>
                                     </svg>
                                 </span>
-                                <h3  className='card2 pl-[9px] text-bluedark font text-15  '>Notes</h3>
-                                <h5 className=' bg-blueblack text-bluedark w-25 h-25 rounded-full ml-[18px] pl-[2.5px]'>10</h5>
+                                <h3  className='card2 pl-[9px] font-Roboto  text-bluedark font text-15  '>Notes</h3>
+                                <h5 className='  bg-punkcolor text-bluedark w-25 h-25 rounded-full ml-[18px] pl-[2.5px]'>10</h5>
                           </div>
 
                           <div className=' flex py-5 pl-[40px]' >
@@ -58,7 +64,7 @@ function Draft () {
                                     </svg>
 
                                 </span>
-                                <h3 className=' card2  pl-[10px]  text-15  text-secondarydark'>Todos</h3>
+                                <h3 className=' card2  pl-[10px] font-Roboto  text-15  text-secondarydark'>Todos</h3>
                                 <h5 className=' bg-secondarypure text-white w-25 h-25 rounded-full ml-[14px] pl-[2.5px]'>10</h5>         
                           </div>
 
@@ -69,7 +75,7 @@ function Draft () {
                                      </svg>
 
                                 </span>
-                                <h3 className=' card2  pl-[11px]  text-15  text-secondarydark'>Events</h3>
+                                <h3 className=' card2  pl-[11px] font-Roboto  text-15  text-secondarydark'>Events</h3>
                                 <h5 className=' bg-secondarypure text-white w-25 h-25 rounded-full ml-[5px] pl-[2.5px]'>10</h5>
                           </div>
 
@@ -83,7 +89,7 @@ function Draft () {
                                     </svg>
 
                                 </span>
-                                <h3 className=' card2    pl-[14px]  text-15  text-secondarydark'>Archives</h3>
+                                <h3 className=' card2    pl-[14px] font-Roboto  text-15  text-secondarydark'>Archives</h3>
                                 <h5 className=' bg-secondarypure text-white w-25 h-25 rounded-full ml-[9px] pl-[2.5px]'>10</h5>
                           </div>
                           <div className=' flex py-5 pl-[27px]' >
@@ -94,7 +100,7 @@ function Draft () {
                                     </svg>
 
                                 </span>
-                                <h3 className=' card2  pl-[13px]  text-secondarydark text-15'>Settings</h3>
+                                <h3 className=' card2  pl-[13px] font-Roboto  text-secondarydark text-15'>Settings</h3>
                                 
                           </div>
                           </div>
@@ -106,7 +112,7 @@ function Draft () {
                                     </svg>
                                 </button>
 
-                                <button className=' bg-bluedark w-111 h-41 rounded-r-full text-white text-16'>Create Note</button>
+                                <button className=' bg-bluedark w-111 h-41 font-Roboto  rounded-r-full text-white text-16' onClick={() => { setDropUp(!dropup)}} >Create Note</button>
                           </div>
                       </div>
                     </div>
@@ -125,9 +131,10 @@ function Draft () {
                                     <p className='  text-[13px] text-graydark'>Incididunt et aliquip sint duis esse. Est duis ea dolor <br></br> eiusmod ut elit incididunt irure nisi duis aliquip<br></br> anim velit. Officia laborum consectetur quis ea <br></br> pariatur proident exercitation. </p>
 
                                     <div className='flex '>
-                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px] bg-primary text-bluedark w-93 h-32 rounded-full text-13'>Personal</h2>
+                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px]  bg-punklight  text-bluedark w-93 h-32 rounded-full text-13'>Personal</h2>
                                         <h3 className=' pl-69 pt-17 text-primarydark text-13 '>23 hours ago</h3>
-                                        <span className='bg-primary  w-50 rounded-full h-26 ml-19 pl-[18px]   pt-3   mt-15'><svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span className='bg-secondary  w-50 rounded-full h-26 ml-19 pl-[18px]   pt-3   mt-15'  onClick={() =>{setDrop(!drop)}}>
+                                            <svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 3C7.32843 3 8 2.32843 8 1.5C8 0.671573 7.32843 0 6.5 0C5.67157 0 5 0.671573 5 1.5C5 2.32843 5.67157 3 6.5 3Z" fill="#777777"/>
                                             <path d="M11.5 3C12.3284 3 13 2.32843 13 1.5C13 0.671573 12.3284 0 11.5 0C10.6716 0 10 0.671573 10 1.5C10 2.32843 10.6716 3 11.5 3Z" fill="#777777"/>
                                             <path d="M1.5 3C2.32843 3 3 2.32843 3 1.5C3 0.671573 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5C0 2.32843 0.671573 3 1.5 3Z" fill="#777777"/>
@@ -143,9 +150,10 @@ function Draft () {
                                     <p className='  text-13 text-graydark'>Incididunt et aliquip sint duis esse. Est duis ea dolor <br></br> eiusmod ut elit incididunt irure nisi duis aliquip<br></br> anim velit. Officia laborum consectetur quis ea <br></br> pariatur proident exercitation. </p>
 
                                     <div className='flex '>
-                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px] bg-primary text-bluedark text-13 w-93 h-32 rounded-full'>Travel</h2>
+                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px]  bg-punklight text-bluedark text-13 w-93 h-32 rounded-full'>Travel</h2>
                                         <h3 className=' pl-69 pt-[17px] text-primarydark  text-13'>23 hours ago</h3>
-                                        <span className='bg-primary  w-50 rounded-full h-26 ml-19 pl-[18px]   pt-3   mt-15'><svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span className='bg-secondary  w-50 rounded-full h-26 ml-19 pl-[18px]   pt-3   mt-15'onClick={() => {setDrop(!drop)}} >
+                                            <svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 3C7.32843 3 8 2.32843 8 1.5C8 0.671573 7.32843 0 6.5 0C5.67157 0 5 0.671573 5 1.5C5 2.32843 5.67157 3 6.5 3Z" fill="#777777"/>
                                             <path d="M11.5 3C12.3284 3 13 2.32843 13 1.5C13 0.671573 12.3284 0 11.5 0C10.6716 0 10 0.671573 10 1.5C10 2.32843 10.6716 3 11.5 3Z" fill="#777777"/>
                                             <path d="M1.5 3C2.32843 3 3 2.32843 3 1.5C3 0.671573 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5C0 2.32843 0.671573 3 1.5 3Z" fill="#777777"/>
@@ -160,9 +168,10 @@ function Draft () {
                                     <p className='  text-13 text-graydark'>Incididunt et aliquip sint duis esse. Est duis ea dolor <br></br> eiusmod ut elit incididunt irure nisi duis aliquip<br></br> anim velit. Officia laborum consectetur quis ea <br></br> pariatur proident exercitation. </p>
 
                                     <div className='flex '>
-                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px] bg-primary text-bluedark w-93 h-32 text-13 rounded-full'>Personal</h2>
+                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px]  bg-punklight text-bluedark w-93 h-32 text-13 rounded-full'>Personal</h2>
                                         <h3 className=' pl-69 pt-17 text-primarydark text-13 '>3 hours ago</h3>
-                                        <span className='bg-primary  w-50 rounded-full h-26 ml-19 pl-[18px]   pt-3   mt-15'><svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span className='bg-secondary  w-50 rounded-full h-26 ml-19 pl-[18px]   pt-3   mt-15' onClick={() => {setDrop(!drop)}}>
+                                            <svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 3C7.32843 3 8 2.32843 8 1.5C8 0.671573 7.32843 0 6.5 0C5.67157 0 5 0.671573 5 1.5C5 2.32843 5.67157 3 6.5 3Z" fill="#777777"/>
                                             <path d="M11.5 3C12.3284 3 13 2.32843 13 1.5C13 0.671573 12.3284 0 11.5 0C10.6716 0 10 0.671573 10 1.5C10 2.32843 10.6716 3 11.5 3Z" fill="#777777"/>
                                             <path d="M1.5 3C2.32843 3 3 2.32843 3 1.5C3 0.671573 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5C0 2.32843 0.671573 3 1.5 3Z" fill="#777777"/>
@@ -177,9 +186,10 @@ function Draft () {
                                     <p className='  text-13 text-graydark'>Incididunt et aliquip sint duis esse. Est duis ea dolor <br></br> eiusmod ut elit incididunt irure nisi duis aliquip<br></br> anim velit. Officia laborum consectetur quis ea <br></br> pariatur proident exercitation. </p>
 
                                     <div className='flex '>
-                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px] bg-primary text-bluedark w-93 text-13 h-32 rounded-full'>Personal</h2>
+                                        <h2 className=' pl-[18px]  pt-[5px] mt-[12px]  bg-punklight text-bluedark w-93 text-13 h-32 rounded-full'>Personal</h2>
                                         <h3 className=' pl-69 pt-17  text-graydark text-13 '>23 hours ago</h3>
-                                        <span className='bg-primary  w-50 rounded-full h-26 ml-19 pl-[18px]  pt-3   mt-15'><svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <span className='bg-secondary  w-50 rounded-full h-26 ml-19 pl-[18px]  pt-3   mt-15' onClick={() => {setDrop(!drop)}}>
+                                            <svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 3C7.32843 3 8 2.32843 8 1.5C8 0.671573 7.32843 0 6.5 0C5.67157 0 5 0.671573 5 1.5C5 2.32843 5.67157 3 6.5 3Z" fill="#777777"/>
                                             <path d="M11.5 3C12.3284 3 13 2.32843 13 1.5C13 0.671573 12.3284 0 11.5 0C10.6716 0 10 0.671573 10 1.5C10 2.32843 10.6716 3 11.5 3Z" fill="#777777"/>
                                             <path d="M1.5 3C2.32843 3 3 2.32843 3 1.5C3 0.671573 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5C0 2.32843 0.671573 3 1.5 3Z" fill="#777777"/>
@@ -190,17 +200,18 @@ function Draft () {
                              </div>
                            </div>
                         </div>
-                         <div className=' bg-white ml-17 mt-15 h-570  w-[920px]'>
+                         <div className=' bg-white ml-17 mt-15 h-570 flex ju  w-[920px]'>
                             <div>
                                 <h1 className=' text-48 font-Roboto font-bold pl-85 pb-2  pt-41'>Learn Darts</h1>
-                                <p className=' text-13 pl-57 text-graydark'>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br></br> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br></br>adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est<br></br> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br></br> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br></br>nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt<br></br> quis.</p>
+                                <p className=' text-13 pl-57 text-graydark '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br></br> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br></br>adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est<br></br> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br></br> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br></br>nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt<br></br> quis.</p>
                                 <p className=' text-13 pl-57 text-graydark pt-11'>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br></br> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br></br>adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est<br></br> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br></br> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br></br>nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt<br></br> quis.</p>
                                 
                             </div>
                          </div>
                          <div>
-                            <div className=' bg-white w-41 h-41 rounded-full pt-19 pl-3.5  ml-5 mt-4'>
-                                <span><svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div className=' bg-white w-41 h-41 rounded-full pt-19 pl-3.5  ml-5 mt-4' onClick={() => {setDropMain(! dropmain)}}>
+                                <span>
+                                    <svg width="13" height="3" viewBox="0 0 13 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.5 3C7.32843 3 8 2.32843 8 1.5C8 0.671573 7.32843 0 6.5 0C5.67157 0 5 0.671573 5 1.5C5 2.32843 5.67157 3 6.5 3Z" fill="#777777"/>
                                     <path d="M11.5 3C12.3284 3 13 2.32843 13 1.5C13 0.671573 12.3284 0 11.5 0C10.6716 0 10 0.671573 10 1.5C10 2.32843 10.6716 3 11.5 3Z" fill="#777777"/>
                                     <path d="M1.5 3C2.32843 3 3 2.32843 3 1.5C3 0.671573 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5C0 2.32843 0.671573 3 1.5 3Z" fill="#777777"/>
@@ -229,6 +240,153 @@ function Draft () {
                     </div>
                 </div>
             </div>
+            {/* section4 */}
+
+            <div className={`dropdown-menu ${drop? 'active' : 'inactive'}`} >
+          <div className=" bg-white shadow-2xl w-[143px] h-[124px]  absolute bottom-[277px] left-[180px] ">
+            <div className=" flex cardD">
+                <span className=" pl-[17px] pt-[9px] ">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8901 0.389997L13.6001 3.11C14.0601 3.57 14.0201 4.35 13.6301 4.75L5.62006 12.77L0.0600586 13.93L1.22006 8.35C1.22006 8.35 8.82006 0.719997 9.21006 0.319997C9.60006 -0.0700034 10.4301 -0.0700033 10.8901 0.389997ZM8.16006 3.18L2.57006 8.79L3.68006 9.9L9.22006 4.25L8.16006 3.18ZM5.19006 11.41L10.7701 5.81L9.70006 4.73L4.11006 10.33L5.19006 11.41Z" fill="#356DFB"/>
+                    </svg>
+              </span>
+
+              <h3 className="  pl-[18px] font-Roboto   pt-[5px]  text-[13px] text-bluedark">Edit</h3>
+            </div>
+
+            <div className=" flex  cardD">
+                <span className=" pl-[17px] pt-[9px] ">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.33398 19.0008V19.008C1.33398 19.5529 1.7731 19.9947 2.31621 20H13.6851C13.9466 19.9974 14.1966 19.8916 14.3805 19.7057C14.5645 19.5197 14.6676 19.2686 14.6673 19.0071V5.66513H1.33398V19.0008ZM2.66732 7.0003H13.334V18.6675H2.66732V7.0003Z" fill="#DDDDDD"/>
+                    <path d="M4.33398 8.33371H5.66732V16.6674H4.33398V8.33371Z" fill="#DDDDDD"/>
+                    <path d="M7.33398 8.33371H8.66732V16.6674H7.33398V8.33371Z" fill="#DDDDDD"/>
+                    <path d="M10.334 8.33371H11.6673V16.6674H10.334V8.33371Z" fill="#DDDDDD"/>
+                    <path d="M11.0009 3.00014V1.00005C11.0009 0.439131 10.6053 0 10.1004 0H5.90044C5.39556 0 5 0.439131 5 1.00005V3.00014H0V4.33353H16V3.00014H11.0009ZM6.33422 1.33339H9.66755V3.00014H6.33422V1.33339Z" fill="#DDDDDD"/>
+                    </svg>
+
+              </span>
+
+              <h3 className="  pl-[18px]  font-Roboto  pt-[5px]  text-[13px] text-primarydark">Delete</h3>
+            </div>
+
+            <div className=" flex  cardD">
+                <span className=" pl-[17px] pt-[9px] ">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4286 7.85714H14.1429M3.85714 14.1429H1V5H17V14.1429H14.1429H3.85714ZM3.85714 10.7143V17H14.1429V10.7143H3.85714ZM14.1429 5V1H3.85714V5H14.1429Z" stroke="#DDDDDD" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+              </span>
+
+              <h3 className="  pl-[18px]  font-Roboto pt-[5px]  text-[13px] text-primarydark">Print</h3>
+            </div>
+
+            <div className=" flex cardD">
+                <span className=" pl-[17px] pt-[9px] ">
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 4H16V1.5C16 1.2 15.8 1 15.5 1H1.5C1.2 1 1 1.2 1 1.5V4H0V1.5C0 0.65 0.65 0 1.5 0H15.5C16.35 0 17 0.65 17 1.5V4Z" fill="#DDDDDD"/>
+                    <path d="M14.5 14H2.5C1.65 14 1 13.35 1 12.5V4H2V12.5C2 12.8 2.2 13 2.5 13H14.5C14.8 13 15 12.8 15 12.5V4H16V12.5C16 13.35 15.35 14 14.5 14Z" fill="#DDDDDD"/>
+                    <path d="M10.5 7H6.5C6.2 7 6 6.8 6 6.5C6 6.2 6.2 6 6.5 6H10.5C10.8 6 11 6.2 11 6.5C11 6.8 10.8 7 10.5 7Z" fill="#DDDDDD"/>
+                    <path d="M0 3H17V4H0V3Z" fill="#DDDDDD"/>
+                    </svg>
+
+              </span>
+
+              <h3 className="  pl-[18px]  font-Roboto pt-[5px]  text-[13px] text-primarydark">Archive</h3>
+            </div>
+          </div>
+        </div>
+
+          {/* section5 */}
+
+          {/* <div  className={`dropdown-menu ${dropmain? 'active' : 'inactive'}`}  >
+          <div className=" bg-whit shadow-2xl w-[200px] h-[160px]  absolute bottom-[390px] left-[1120px] ">
+            <div className=" flex cardD">
+                <span className=" pl-[17px] pt-[9px] ">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8901 0.389997L13.6001 3.11C14.0601 3.57 14.0201 4.35 13.6301 4.75L5.62006 12.77L0.0600586 13.93L1.22006 8.35C1.22006 8.35 8.82006 0.719997 9.21006 0.319997C9.60006 -0.0700034 10.4301 -0.0700033 10.8901 0.389997ZM8.16006 3.18L2.57006 8.79L3.68006 9.9L9.22006 4.25L8.16006 3.18ZM5.19006 11.41L10.7701 5.81L9.70006 4.73L4.11006 10.33L5.19006 11.41Z" fill="#356DFB"/>
+                    </svg>
+              </span>
+
+              <h3 className="  pl-[18px]  pt-[5px]  font-Roboto text-[13px]  text-bluedark">Edit</h3>
+            </div>
+
+            <div className=" flex  cardD">
+                <span className=" pl-[17px] pt-[9px] ">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.33398 19.0008V19.008C1.33398 19.5529 1.7731 19.9947 2.31621 20H13.6851C13.9466 19.9974 14.1966 19.8916 14.3805 19.7057C14.5645 19.5197 14.6676 19.2686 14.6673 19.0071V5.66513H1.33398V19.0008ZM2.66732 7.0003H13.334V18.6675H2.66732V7.0003Z" fill="#DDDDDD"/>
+                    <path d="M4.33398 8.33371H5.66732V16.6674H4.33398V8.33371Z" fill="#DDDDDD"/>
+                    <path d="M7.33398 8.33371H8.66732V16.6674H7.33398V8.33371Z" fill="#DDDDDD"/>
+                    <path d="M10.334 8.33371H11.6673V16.6674H10.334V8.33371Z" fill="#DDDDDD"/>
+                    <path d="M11.0009 3.00014V1.00005C11.0009 0.439131 10.6053 0 10.1004 0H5.90044C5.39556 0 5 0.439131 5 1.00005V3.00014H0V4.33353H16V3.00014H11.0009ZM6.33422 1.33339H9.66755V3.00014H6.33422V1.33339Z" fill="#DDDDDD"/>
+                    </svg>
+
+              </span>
+
+              <h3 className="  pl-[18px] font-Roboto  pt-[10px]  text-[13px] text-primarydark">Delete</h3>
+            </div>
+
+            <div className=" flex  cardD">
+                <span className=" pl-[17px] pt-[19px] ">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4286 7.85714H14.1429M3.85714 14.1429H1V5H17V14.1429H14.1429H3.85714ZM3.85714 10.7143V17H14.1429V10.7143H3.85714ZM14.1429 5V1H3.85714V5H14.1429Z" stroke="#DDDDDD" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+              </span>
+
+              <h3 className="  pl-[18px]  pt-[19px]  font-Roboto text-[13px] text-primarydark">Print</h3>
+            </div>
+
+            <div className=" flex cardD">
+                <span className=" pl-[17px] pt-[21px] ">
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 4H16V1.5C16 1.2 15.8 1 15.5 1H1.5C1.2 1 1 1.2 1 1.5V4H0V1.5C0 0.65 0.65 0 1.5 0H15.5C16.35 0 17 0.65 17 1.5V4Z" fill="#DDDDDD"/>
+                    <path d="M14.5 14H2.5C1.65 14 1 13.35 1 12.5V4H2V12.5C2 12.8 2.2 13 2.5 13H14.5C14.8 13 15 12.8 15 12.5V4H16V12.5C16 13.35 15.35 14 14.5 14Z" fill="#DDDDDD"/>
+                    <path d="M10.5 7H6.5C6.2 7 6 6.8 6 6.5C6 6.2 6.2 6 6.5 6H10.5C10.8 6 11 6.2 11 6.5C11 6.8 10.8 7 10.5 7Z" fill="#DDDDDD"/>
+                    <path d="M0 3H17V4H0V3Z" fill="#DDDDDD"/>
+                    </svg>
+
+              </span>
+
+              <h3 className="  pl-[18px] font-Roboto   pt-[18px]  text-[13px] text-primarydark">Archive</h3>
+            </div>
+          </div>
+        </div> */}
+
+          {/* section6 */}
+
+           <div className={`dropdown-menu ${dropup? 'active' : 'inactive'}`}>
+            <div className=' bg-white shadow-2xl rounded   w-[454px]  h-[450px] absolute bottom-[30px]  left-[500px] '>
+                <div className=' flex  border-b pb-[7px]'>
+                    <h1 className=' pl-[22px] pt-[16px] text-[18px] font-Roboto font-bold '>Write a Note</h1>
+                     <span className=' pl-[297px] pt-[20px] ' onClick={() => {setDropUp(! dropup)}}>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.792678L11.2073 0L6 5.20732L0.792678 0L0 0.792678L5.20732 6L0 11.2073L0.792678 12L6 6.79268L11.2073 12L12 11.2073L6.79268 6L12 0.792678Z" fill="#777777"/>
+                        </svg>
+                     </span>
+                </div>
+
+                <div >
+                    <h3 className=' text-[14px] font-bold font-Roboto  pl-[22px] pt-[13px]'>Title</h3>
+                    <input className=' outline-none text-primarydark font-Roboto   text-[14px] mt-[7px]  bg-extra border w-[410px] h-[46px] ml-[22px] rounded-xl  pl-[14px] border-extracolor' placeholder='note title'></input>
+                </div>
+
+                <div >
+                    <h3 className=' text-[14px] font-bold font-Roboto   pl-[22px] pt-[13px]'>Title</h3>
+                    <input className=' outline-none text-primarydark  font-Roboto  mt-[7px]  text-[14px]  bg-extra border w-[410px] h-[46px] ml-[22px] rounded-xl  pl-[14px] border-extracolor' placeholder='note title'></input>
+                </div>
+
+
+                <div >
+                    <h3 className=' text-[14px] font-bold font-Roboto   pl-[22px] pt-[13px]'>Title</h3>
+                    <div className=' note'>
+                       <textarea className=' outline-none font-Roboto  pl-[14px]  pt-[14px] rounded-2xl w-[410px] h-[99px]   bg-extra  ' placeholder='note body'></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <button className=' bg-bluedark text-white ml-[22px] mt-[20px] w-[141px] h-[48px] font-Roboto text-[16px] rounded-full'>Create</button>
+                </div>
+            </div>
+           </div>
+
         </div>
     )
 }

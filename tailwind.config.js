@@ -3,11 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
  
   theme: {
+
+  
+
     extend: {
 
 
        screens: {
         mf: '1200px',
+        sml: '200px',
       },
 
       width: {
@@ -67,6 +71,9 @@ module.exports = {
       colors: {
         bluelight: ' #507EF5',
         blueblack: 'rgba(0, 0, 0, 0.2)',
+        extra: 'rgba(196, 196, 196, 0.05)',
+        punkcolor: ' rgba(53, 109, 251, 0.1)',
+        punklight: ' rgba(53, 109, 251, 0.05)',
         ashlight: '  #EEEEEE',
         primarydark: ' #CCCCCC',
         bluelight: ' #507EF5',
@@ -79,6 +86,7 @@ module.exports = {
         secondary: ' #F7FBFD',
         secondarydark: '#C4C4C4',
         secondarypure: '#DDDDDD',
+        extracolor: '#DEDFEC',
         
         
       },

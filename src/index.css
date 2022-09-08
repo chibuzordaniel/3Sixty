@@ -73,13 +73,19 @@
   color: #356DFB;
 }
 
+.cardD:hover{
+  background-color: #F7FBFD;
+  
+
+}
+
 .note{
   background: rgba(196, 196, 196, 0.05);
   border: 1px solid #DEDFEC;
   border-radius: 10px;
-  height: 46px;
+  height: 99px;
   width: 410px;
-  margin-left: 21px;
+  margin-left: 22px;
   outline: none;
   
 }
