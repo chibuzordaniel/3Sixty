@@ -149,10 +149,10 @@ function  Main () {
                             <path d="M19.8055 8.0415H19V8H10V12H15.6515C15.2571 13.1082 14.5467 14.0766 13.608 14.7855L13.6095 14.7845L16.7045 17.4035C16.4855 17.6025 20 15 20 10C20 9.3295 19.931 8.675 19.8055 8.0415Z" fill="#1976D2"/>
                             </svg>
                        </span>
-                        <h3  className=" text-bluedark pt-8  pl-17  cursor-pointer font-Roboto lg:text-16   sml: text-[36px]  "> Sign up with Google</h3>
+                        <h3  className=" text-bluedark lg:pt-8  pl-17  cursor-pointer font-Roboto lg:text-16   sml: text-[26px] pt-[15px]  "> Sign up with Google</h3>
                     </div>
 
-                    <div  className="flex  lg:pl-105 pt-14  text-graypure sml: pl-[150px]">
+                    <div  className="flex  lg:pl-105 pt-14  text-graypure sml: pl-[70px]">
                         <span className=" lg:p-11  sml: p-[23px]">
                             <svg className=' lg:h-[1px]  sml: h-[2px] ' width="" height="" viewBox="0 0 46 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line y1="0.5" x2="46" y2="0.5" stroke="#B6B8C9"/>
