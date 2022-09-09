@@ -44,8 +44,8 @@ function  Main  () {
                     <div>
                     <div className=' ml-[282px] mt-[25px]'>
                         <img className=' ' src={Component12} alt="" />
-                        <div className=' bg-white h-[259px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
-                            <img className='w-[237px] h-[195px]' src={Rectangle1} alt="" />
+                        <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
+                            <img className='w-[237px] h-[175px]' src={Rectangle1} alt="" />
                             <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>track your TODOS status</h2>
                         </div> 
                     </div>
@@ -53,16 +53,16 @@ function  Main  () {
                     <div className=' flex '>
                             <div className=' ml-[99px]  -mt-[90px] '>
                                 <img className=' ' src={Component12} alt="" />
-                                <div className=' bg-white h-[259px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
-                                    <img className=' w-[237px] h-[195px] ' src={Rectangle2} alt="" />
+                                <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
+                                    <img className=' w-[237px] h-[175px] ' src={Rectangle2} alt="" />
                                     <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>Jot down reusable code snippets</h2>
                                 </div> 
                             </div>
 
-                            <div className=' mt-[77px] ml-[105px] '>
+                            <div className=' mt-[55px] ml-[105px] '>
                                 <img className='  ' src={Component12} alt="" />
-                                <div className=' bg-white h-[259px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
-                                    <img className=' w-[237px] h-[195px] -mt-[165px]' src={Rectangle3} alt="" />
+                                <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
+                                    <img className=' w-[237px] h-[175px] -mt-[145px]' src={Rectangle3} alt="" />
                                     <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>Jot down your daily activities</h2>
                                 </div> 
                           </div>
@@ -70,7 +70,7 @@ function  Main  () {
                     </div>
                 </div>
             </div>
-            <footer className=' text-center text-[11px] font-Open Sans -mt-[67px] '>All Rights Reserved. 2020 @wiztemple</footer>
+            <footer className=' text-center text-[11px] font-Open Sans -mt-[30px] '>All Rights Reserved. 2020 @wiztemple</footer>
             <Signup visible={signup} onClose={handleClose } />
             <Signin visible={signin} onClose={dropClose} />
         </div>

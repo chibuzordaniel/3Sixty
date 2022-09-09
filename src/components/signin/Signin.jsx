@@ -38,7 +38,7 @@ function Signin ({visible, onClose}) {
                      <div>
                         <input className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[20px] w-[314px] h-[46px] ml-[26px] pl-[17px] capitalize '  placeholder='E-mail' type="text" required />
                         <input className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[20px] w-[314px] h-[46px] ml-[26px] pl-[17px] capitalize '  placeholder='Password' type="text" required />
-                        <button className=' bg-[#356DFB]  w-[314px] h-[46px] rounded-full ml-[26px] text-[16px] text-white mt-[25px] font-Roboto '>Sign Up</button>
+                        <button className=' bg-[#356DFB]  w-[314px] h-[46px] rounded-full ml-[26px] text-[16px] text-white mt-[29px] font-Roboto '>Sign Up</button>
                         <p className=' text-center text-[12px] pt-[15px] font-Roboto '>Don’t have an account?<span className=' text-[#356DFB] cursor-pointer pl-[5px]'>Sign in here</span></p>
                      </div>
                   </form>
