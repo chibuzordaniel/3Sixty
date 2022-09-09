@@ -10,119 +10,12 @@
 @tailwind utilities;
 
 
-.dropdown-menu.active{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-  
-}
-
-.dropdown-menu.active{
-  opacity: 1;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: var(--speed) ease;
-  
-}
-
-.dropup-menu.active{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-  
-}
-
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 
 
 
 
-.borderline1 {
-  border:  1.5px solid  #356DFB;
-  width: 314px;
-  height: 46px;
-  margin-top: 13px;
-  margin-left: 27px;
-  border-radius: 10px;
-}
 
-.dropup-menu.active{
-  opacity: 1;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: var(--speed) ease;
-  
-}
-
-.card-hover:hover{
-  background: #F7FBFD;
-}
-
-.card1{
-  position: relative;
-  bottom: 600px;
-}
-
-.card2:hover{
-  color: #356DFB;
-}
-
-.cardD:hover{
-  background-color: #F7FBFD;
-  
-
-}
-
-.note{
-  background: rgba(196, 196, 196, 0.05);
-  border: 1px solid #DEDFEC;
-  border-radius: 10px;
-  height: 99px;
-  width: 410px;
-  margin-left: 22px;
-  outline: none;
-  
-}
-
-.note > input{
-  outline: none;
-  background: rgba(196, 196, 196, 0.05);
-  width: 410px;
-  height: 42px;
-  padding-left: 14px;
-}
-
-.textarea{
-  background: rgba(196, 196, 196, 0.05);
-  border: 1px solid #DEDFEC;
-  border-radius: 10px;
-  height: 110px;
-  width: 410px;
-  margin-left: 21px;
-  
-}
-
-.textarea > textarea{
-  background: rgba(196, 196, 196, 0.05);
-  border: 1px solid #DEDFEC;
-  border-radius: 10px;
-  height: 110px;
-  width: 410px;
-  padding-left: 14px;
-  padding-top: 14px;
-  outline: none;
-}
-
-.title{
-  border-bottom: 0.5px solid #DDDDDD;
-  padding-bottom: 15px;
-}
 
 
 
