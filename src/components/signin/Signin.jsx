@@ -15,7 +15,7 @@ function Signin ({visible, onClose}) {
 
   return (
    <div id='Signin'   onClick={windowClose} className=' bg-[#00000033] w-full h-full  absolute top-0'>
-      <div className=' absolute top-[60px] left-[520px]  '>
+      <div className=' absolute top-[60px] left-[600px]  '>
          <div className=" bg-white rounded-2xl shadow-2xl h-[590px] w-[365px]   ">
             <div className=''>
                   <img className='relative left-[330px] top-[15px]'  src={Vector1} alt="" onClick={onClose} />
