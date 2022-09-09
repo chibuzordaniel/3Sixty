@@ -10,7 +10,6 @@ import Signin from '../signin/Signin';
 
 function  Main  () {
 
-    // const [Signup, setSignUp] = useState (false);
     const [signup, setSignUp] = useState (false)
     const [signin, setSignIn] = useState (false)
     const handleClick = () =>  setSignUp (true)
@@ -34,19 +33,19 @@ function  Main  () {
 
             <div className='w-full max-w-[1200px]  mx-auto '>
                 <div className=' flex '>
-                    <div className=" py-[27px]">
+                    <div className=" pt-[44px]">
                         <h1 className=" text-[48px] font-Roboto  font-bold leading-[65px] ">You can’t really <br></br> manage time, but you <br></br>  can take small steps <br></br> that counts on a long <br></br> run.</h1>
-                        <p className=' flex gap-[21px] text-[16px] pt-[27px] font-Open Sans '><span className=' pt-1'> <img src={Component11} alt="" /></span> Track your daily activities</p>
+                        <p className=' flex gap-[21px] text-[16px] pt-[41px] font-Open Sans '><span className=' pt-1'> <img src={Component11} alt="" /></span> Track your daily activities</p>
                         <p className=' flex gap-[21px]  text-[16px] pt-[10px] font-Open Sans '><span className='pt-1'> <img src={Component11} alt="" /></span> Save important notes or code snippets you’re likely to reuse</p>
                         <p className=' flex gap-[21px]  text-[16px] pt-[10px] font-Open Sans '><span  className='pt-1'> <img src={Component11} alt="" /></span>keep a diary of your daily activities</p>
-                        <button className=' bg-[#356DFB] text-[16px] text-white mt-[73px]  w-[177px] h-[52px] rounded-full font-Open Sans '>Get Started</button>
+                        <button className=' bg-[#356DFB] text-[16px] text-white mt-[93px]  w-[177px] h-[52px] rounded-full font-Open Sans '>Get Started</button>
                     </div>
                     
                     <div>
                     <div className=' ml-[282px] mt-[25px]'>
                         <img className=' ' src={Component12} alt="" />
-                        <div className=' bg-white h-[229px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
-                            <img className='w-[237px] h-[160px]' src={Rectangle1} alt="" />
+                        <div className=' bg-white h-[259px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
+                            <img className='w-[237px] h-[195px]' src={Rectangle1} alt="" />
                             <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>track your TODOS status</h2>
                         </div> 
                     </div>
@@ -54,16 +53,16 @@ function  Main  () {
                     <div className=' flex '>
                             <div className=' ml-[99px]  -mt-[90px] '>
                                 <img className=' ' src={Component12} alt="" />
-                                <div className=' bg-white h-[229px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
-                                    <img className=' w-[237px] h-[160px] ' src={Rectangle2} alt="" />
+                                <div className=' bg-white h-[259px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
+                                    <img className=' w-[237px] h-[195px] ' src={Rectangle2} alt="" />
                                     <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>Jot down reusable code snippets</h2>
                                 </div> 
                             </div>
 
-                            <div className=' mt-[47px] ml-[105px] '>
+                            <div className=' mt-[77px] ml-[105px] '>
                                 <img className='  ' src={Component12} alt="" />
-                                <div className=' bg-white h-[229px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
-                                    <img className=' w-[237px] h-[160px] -mt-[137px]' src={Rectangle3} alt="" />
+                                <div className=' bg-white h-[259px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
+                                    <img className=' w-[237px] h-[195px] -mt-[165px]' src={Rectangle3} alt="" />
                                     <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>Jot down your daily activities</h2>
                                 </div> 
                           </div>
