@@ -1,7 +1,6 @@
 import { Main, Signup, Signin, Draft } from './components'
 import './App.css';
 import {Route, Routes} from 'react-router-dom'
-// import Draft from './components/showcase/Draft';
 
 function App() {
    return (
