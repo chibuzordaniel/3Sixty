@@ -23,7 +23,7 @@ function  Main  () {
         <div className="  ">
             <div className='w-full max-w-[1200px]  mx-auto '>
                 <div className=" pt-[15px] flex justify-between">
-                    <h1 className=" text-[36px] text-[#000000] font-Gruppo font-semibold">3Sixty</h1>
+                    <h1 className=" text-[36px] font-Gruppo font-semibold">3Sixty</h1>
                     <div className=" pt-[12px] ">
                         <button className=" bg-[#507EF5] w-[83px] h-[44px] text-[14px]  rounded-l-full text-white " onClick={dropDown} >Login</button>
                         <button className=" bg-[#356DFB] w-[96px] h-[44px] text-[14px] rounded-r-full text-white " onClick={handleClick}>Sign Up</button>
@@ -50,7 +50,7 @@ function  Main  () {
                             </div> 
                         </div>
 
-                        <div className=' flex '>
+                        <div className=' flex  '>
                                 <div className=' ml-[99px]  -mt-[90px] '>
                                     <img className=' ' src={Component12} alt="" />
                                     <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
@@ -65,11 +65,11 @@ function  Main  () {
                                         <img className=' w-[237px] h-[175px] -mt-[145px]' src={Rectangle3} alt="" />
                                         <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>Jot down your daily activities</h2>
                                     </div> 
-                              </div>
-                          </div>
-                      </div>
-                 </div>
-              </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <footer className=' text-center text-[11px] font-Open Sans -mt-[30px] '>All Rights Reserved. 2020 @wiztemple</footer>
             <Signup visible={signup} onClose={handleClose } />
             <Signin visible={signin} onClose={dropClose} />

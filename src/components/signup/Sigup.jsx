@@ -27,7 +27,7 @@ function Signup ({visible, onClose}) {
                   <h3 className=' text-[16px] text-[#356DFB] pt-[7px] font-bold pl-[15px] font-Roboto '>Sign up with Google</h3>
                </div>
 
-               <div className=' flex ml-[105px] mt-[19px]  '>
+               <div className='  flex ml-[105px] mt-[19px]  '>
                   <img className='w-[46px]  h-[1px] mt-[12px]' src={line1} alt="" />
                   <h3 className=' pl-[13px] font-Roboto'>OR</h3>
                   <img className='w-[46px] ml-[13px] h-[1px] mt-[12px]' src={line1} alt="" />

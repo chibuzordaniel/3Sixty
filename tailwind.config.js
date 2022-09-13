@@ -8,7 +8,10 @@ module.exports = {
 
     extend: {
 
-
+      colors:{
+        'bluelight': ' rgba(53, 109, 251, 0.05)',
+        'blueadd': ' rgba(53, 109, 251, 0.08)',
+      },
       
       
 
