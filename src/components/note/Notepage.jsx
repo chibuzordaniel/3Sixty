@@ -1,6 +1,4 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import {Link, Outlet} from 'react-router-dom'
-
 function  Notepage () {
     return (
         <div>
@@ -19,7 +17,7 @@ function  Notepage () {
                       <button className=" text-[16px] font-Robotoio rounded-full text-white w-[141px] h-[48px] mt-[20px] bg-[#356DFB]">Create</button>
                 </div>
             </div>
-          <Outlet />
+          
         </div>
     )
 }
