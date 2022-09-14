@@ -42,7 +42,7 @@ function  Main  () {
                     </div>
                     
                     <div>
-                        <div className=' ml-[282px] mt-[25px]'>
+                        <div className=' ml-[432px] mt-[25px]'>
                             <img className=' ' src={Component12} alt="" />
                             <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
                                 <img className='w-[237px] h-[175px]' src={Rectangle1} alt="" />
@@ -51,7 +51,7 @@ function  Main  () {
                         </div>
 
                         <div className=' flex  '>
-                                <div className=' ml-[99px]  -mt-[90px] '>
+                                <div className=' ml-[230px]  -mt-[90px] '>
                                     <img className=' ' src={Component12} alt="" />
                                     <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
                                         <img className=' w-[237px] h-[175px] ' src={Rectangle2} alt="" />
@@ -59,7 +59,7 @@ function  Main  () {
                                     </div> 
                                 </div>
 
-                                <div className=' mt-[55px] ml-[105px] '>
+                                <div className=' mt-[55px] ml-[159px] '>
                                     <img className='  ' src={Component12} alt="" />
                                     <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
                                         <img className=' w-[237px] h-[175px] -mt-[145px]' src={Rectangle3} alt="" />
