@@ -1,7 +1,11 @@
 import { Cog8ToothIcon, MagnifyingGlassIcon, ArchiveBoxIcon, PlusIcon, EllipsisHorizontalIcon, MinusIcon } from '@heroicons/react/24/outline'
-import Ellipse from  './img/Ellipse 17.png'
-import {TbNotes } from 'react-icons/tb'
-import {BsListCheck, BsTrophy } from 'react-icons/bs'
+import Ellipse from  './img/Ellipse 17.png';
+import {TbNotes } from 'react-icons/tb';
+import {BsListCheck, BsTrophy } from 'react-icons/bs';
+// import { Link, } from 'react-router-dom';
+import Login from '../login/Login';
+// import Setup from '../setup/Setup';
+// import Notepage from '../note/Notepage';
 
 
 function Draft () {
@@ -11,7 +15,7 @@ function Draft () {
             <div  className="  bg-white">
                 <div className="    mx-[35px] ">
                     <div className=' flex gap-[129px]'>
-                        <h1 className=" text-[36px] font-Gruppo h-[80px] pt-[8px] font-normal text-[#000000]  ">  3Si<span className=' absolute -ml-[10px] mt-[10px]'><img className=' h-[13px] w-[13px] ' src={Ellipse} alt="" /></span>xty </h1>
+                        <h1 className=" text-[36px] font-Gruppo h-[80px] pt-[8px] font-normal text-[#000000]  ">  3Si<span className=' absolute -ml-[11px] mt-[6px]'><img className=' h-[13px] w-[13px] ' src={Ellipse} alt="" /></span>xty </h1>
                         <div className=' flex '>
                             <MagnifyingGlassIcon className=' mt-[19px] w-[40px] text-[#DDDDDD] h-[40px] absolute ml-[20px] ' />
                             <input className=' pl-[69px] pt-[px] text-[14px] text-[#777777] mt-[10px] font-Roboto w-[300px] h-[56px]  outline-[#C4C4C4]' placeholder='Search notes' type="text" />
@@ -148,6 +152,9 @@ function Draft () {
                    </div>
               </div>
           </div>
+          < Login />
+          {/* <Setup /> */}
+          {/* <Notepage /> */}
       </div>
     )
 }

@@ -21,7 +21,7 @@ function  Main  () {
 
     return (
         <div className="  ">
-            <div className='w-full max-w-[1200px]  mx-auto '>
+            <div className=' max-w-[1400px]  mx-auto '>
                 <div className=" pt-[15px] flex justify-between">
                     <h1 className=" text-[36px] font-Gruppo font-semibold">3Sixty</h1>
                     <div className=" pt-[12px] ">
@@ -31,7 +31,7 @@ function  Main  () {
                 </div>
             </div>
 
-            <div className='w-full max-w-[1200px]  mx-auto '>
+            <div className=' max-w-[1400px]  mx-auto '>
                 <div className=' flex '>
                     <div className=" pt-[44px]">
                         <h1 className=" text-[48px] font-Roboto  font-bold leading-[65px] ">You can’t really <br></br> manage time, but you <br></br>  can take small steps <br></br> that counts on a long <br></br> run.</h1>
