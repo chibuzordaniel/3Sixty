@@ -2,6 +2,7 @@ import { Cog8ToothIcon, MagnifyingGlassIcon, ArchiveBoxIcon, PlusIcon, EllipsisH
 import Ellipse from  './img/Ellipse 17.png';
 import {TbNotes } from 'react-icons/tb';
 import {BsListCheck, BsTrophy } from 'react-icons/bs';
+import React, { useState} from 'react';
 // import { Link, } from 'react-router-dom';
 import Login from '../login/Login';
 // import Setup from '../setup/Setup';
@@ -9,6 +10,9 @@ import Login from '../login/Login';
 
 
 function Draft () {
+
+    const [login, setLogin] = useState(false)
+    const handleLogin = () => setLogin (true)
 
     return(
         <div className=' '>
@@ -29,7 +33,7 @@ function Draft () {
                     <div className=' flex  justify-between '>
                         <div className=' flex'>
                             <div className=' grid  grid-cols-3  group  hover:border-b-[3px] hover:border-[#356DFB] pb-[15px] '>
-                                <TbNotes className=' group-hover:text-[#356DFB]  text-[#C4C4C4] mt-[20px] w-[31px] h-[35px]' /> 
+                                <TbNotes className=' group-hover:text-[#356DFB]  text-[#C4C4C4] mt-[20px] w-[31px] h-[35px]' onClick={handleLogin} /> 
                                 <h3 className=' group-hover:text-[#356DFB]  text-[16px] pt-[27px] pl-[px] text-[#C4C4C4] font-Roboto'>Notes</h3>
                                 <p className=' group-hover:text-[#356DFB] group-hover:bg-blueadd text-[15px] text-white bg-[#DDDDDD] text-center w-[25px] h-[25px] rounded-full mt-[26px] ml-[13px] '>10</p>
                             </div>
@@ -152,7 +156,7 @@ function Draft () {
                    </div>
               </div>
           </div>
-          < Login />
+          < Login visible={login} />
           {/* <Setup /> */}
           {/* <Notepage /> */}
       </div>

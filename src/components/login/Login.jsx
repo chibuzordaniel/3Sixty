@@ -1,7 +1,9 @@
 import { ArchiveBoxIcon, PencilIcon, PrinterIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 
-function  Login ()  {
+function  Login ({visible})  {
+
+    if (!visible) return null
     return (
         <div className=" absolute top-[370px] left-[170px] bg-white   shadow-2xl w-[143px] h-[124px]  ">
             <div className='  pt-[10px]  '>
