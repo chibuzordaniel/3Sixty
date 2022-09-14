@@ -42,7 +42,7 @@ function  Main  () {
                     </div>
                     
                     <div>
-                        <div className=' ml-[432px] mt-[25px]'>
+                        <div className=' ml-[439px] mt-[25px]'>
                             <img className=' ' src={Component12} alt="" />
                             <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
                                 <img className='w-[237px] h-[175px]' src={Rectangle1} alt="" />
