@@ -17,8 +17,6 @@ function  Main  () {
     const dropDown = ()  =>  setSignIn ( true)
     const dropClose = ()  =>  setSignIn ( false)
 
-
-
     return (
         <div className="  ">
             <div className=' max-w-[1400px]  mx-auto '>
@@ -65,7 +63,7 @@ function  Main  () {
                                         <img className=' w-[237px] h-[175px] -mt-[145px]' src={Rectangle3} alt="" />
                                         <h2 className=' text-center text-[14px] font-Open Sans py-[22px]'>Jot down your daily activities</h2>
                                     </div> 
-                        </div>
+                              </div>
                         </div>
                     </div>
                 </div>

@@ -12,6 +12,8 @@ module.exports = {
         'bluelight': ' rgba(53, 109, 251, 0.05)',
         'blueadd': ' rgba(53, 109, 251, 0.08)',
         'blueass': ' rgba(196, 196, 196, 0.05)',
+        'redlight': '  rgba(241, 56, 67, 0.2)',
+       
         
       },
       

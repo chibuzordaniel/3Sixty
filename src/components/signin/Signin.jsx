@@ -1,4 +1,3 @@
-
 import Vector1 from './img/Vector (1).png'
 import line1 from './img/Line 20.png'
 import {FcGoogle} from 'react-icons/fc'

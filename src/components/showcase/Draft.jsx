@@ -3,16 +3,25 @@ import Ellipse from  './img/Ellipse 17.png';
 import {TbNotes } from 'react-icons/tb';
 import {BsListCheck, BsTrophy } from 'react-icons/bs';
 import React, { useState} from 'react';
-// import { Link, } from 'react-router-dom';
 import Login from '../login/Login';
-// import Setup from '../setup/Setup';
-// import Notepage from '../note/Notepage';
+import Setup from '../setup/Setup';
+import Notepage from '../note/Notepage';
+import Delete from '../delete/Delete';
+
 
 
 function Draft () {
 
-    const [login, setLogin] = useState(false)
-    const handleLogin = () => setLogin (true)
+  const [togggle, setToggle] = useState(false);
+  const [note, setNote] = useState(false);
+  const [setup, setSetUp ] = useState(false);
+  const handleToggle = () => setToggle(true);
+  const handleToggleClose = () => setToggle(false);
+  const handleNote = () => setNote(true);
+  const handleNoteOut = () => setNote(false);
+  const handleSetUp = () => setSetUp(true);
+  const handleSetOut = () => setSetUp(false);
+    
 
     return(
         <div className=' '>
@@ -33,7 +42,7 @@ function Draft () {
                     <div className=' flex  justify-between '>
                         <div className=' flex'>
                             <div className=' grid  grid-cols-3  group  hover:border-b-[3px] hover:border-[#356DFB] pb-[15px] '>
-                                <TbNotes className=' group-hover:text-[#356DFB]  text-[#C4C4C4] mt-[20px] w-[31px] h-[35px]' onClick={handleLogin} /> 
+                                <TbNotes className=' group-hover:text-[#356DFB]  text-[#C4C4C4] mt-[20px] w-[31px] h-[35px]'  /> 
                                 <h3 className=' group-hover:text-[#356DFB]  text-[16px] pt-[27px] pl-[px] text-[#C4C4C4] font-Roboto'>Notes</h3>
                                 <p className=' group-hover:text-[#356DFB] group-hover:bg-blueadd text-[15px] text-white bg-[#DDDDDD] text-center w-[25px] h-[25px] rounded-full mt-[26px] ml-[13px] '>10</p>
                             </div>
@@ -64,7 +73,7 @@ function Draft () {
 
                         <div className=' mt-[17px] flex  '>
                             <button className=' bg-[#4C7DFA] w-[64px] h-[45px]  rounded-l-full  '><PlusIcon className=' text-center text-white w-[20px] h-[20px] ml-[20px] '/></button>
-                            <button className=' bg-[#356DFB] w-[111px] h-[45px] rounded-r-full text-[16px] text-white font-Roboto'>Create Note</button>
+                            <button className=' bg-[#356DFB] w-[111px] h-[45px] rounded-r-full text-[16px] text-white font-Roboto' onClick={handleNote}>Create Note</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +92,7 @@ function Draft () {
                                         <div className=' flex'>
                                             <h3 className=' bg-bluelight border-2-[#EEEEEE] w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
                                             <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' /></h4>
+                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' onClick={handleToggle} /></h4>
 
                                         </div>
                                 </div>
@@ -98,7 +107,7 @@ function Draft () {
                                         <div className=' flex'>
                                             <h3 className=' bg-bluelight w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
                                             <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' /></h4>
+                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' onClick={handleToggle} /></h4>
                                         </div>
                                 </div>
                             </div>
@@ -112,7 +121,7 @@ function Draft () {
                                     <div className=' flex'>
                                         <h3 className=' bg-bluelight bor w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
                                         <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                        <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' /></h4>
+                                        <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' onClick={handleToggle}/></h4>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +135,7 @@ function Draft () {
                                         <div className=' flex'>
                                             <h3 className=' bg-bluelight w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
                                             <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' /></h4>
+                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]'onClick={handleToggle} /></h4>
                                         </div>
                                   </div>
                              </div>
@@ -138,12 +147,12 @@ function Draft () {
                     <div className='  bg-white h-[600px] w-[1120px] ml-[16px] mt-[17px]'>
                         <h1 className='text-[48px] font-Roboto font-bold pt-[41px] pl-[60px] '>Learn Darts</h1>
                         <p className=' pl-[47px] pt-[9px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p>
-                        {/* <p className=' pl-[57px] pt-[10px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p> */}
+                        <p className=' pl-[57px] pt-[10px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p>
                     </div>      
                  
 
                    <div className='mr-[55px] '>
-                     <h4 className=' p-[3px] mt-[15px] text-[#777777] rounded-full ml-[20px] bg-white w-[40px] h-[40px] '><EllipsisHorizontalIcon /></h4>
+                     <h4 className=' p-[3px] mt-[15px] text-[#777777] rounded-full ml-[20px] bg-white w-[40px] h-[40px] '><EllipsisHorizontalIcon onClick={handleSetUp} /></h4>
                      <div className=' bg-white w-[42px] h-[86px] ml-[20px] mt-[17px] rounded-t-full rounded-b-full  '>
                         <div className='border-b-[1px] '>
                            <PlusIcon className=' text-[#777777] w-[24px] h-[44px] ml-[9px]  ' />
@@ -156,9 +165,10 @@ function Draft () {
                    </div>
               </div>
           </div>
-          < Login visible={login} />
-          {/* <Setup /> */}
-          {/* <Notepage /> */}
+          < Login visible={togggle} onClose={handleToggleClose} />
+          <Setup visible={setup} onClose={handleSetOut} />
+          <Notepage visible={note} onClose={handleNoteOut} />
+          <Delete visible />
       </div>
     )
 }
