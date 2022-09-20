@@ -12,16 +12,15 @@ function App() {
         <Route path='' element={<Signin />}/>
         <Route path='' element={ <Signup />}/>
         <Route path='Draft' element={  <Draft/>}/>
-          <Route path='' element={  <Login/>}/>
-          <Route path='' element={  <Setup/>}/>
-          <Route path='' element={   <Notepage/> }/>
-          <Route path='' element={   <Delete/> }/>
-          
+        <Route path='' element={  <Login/>}/>
+        <Route path='' element={  <Setup/>}/>
+        <Route path='' element={<Notepage/> }/>
+        <Route path='' element={<Delete/> }/>
      </Routes>
       
 
      
-    
+     
     </>
    )
 }

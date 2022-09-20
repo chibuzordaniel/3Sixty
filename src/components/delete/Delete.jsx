@@ -1,12 +1,12 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import vector from './img/Vector (3).png'
 
-function  Delete ({visible}) {
+function  Delete () {
 
-    if (!visible) return null;
+    // if (!visible) return null;
 
     return(
-        <div  className=' bg-[#00000033] w-full h-full  absolute top-0 hidden'>
+        <div  className=' bg-[#00000033] w-full h-full  absolute top-0 hidden '>
             <div className=" bg-white shadow-2xl  w-[339px] h-[225px] absolute top-[350px] left-[550px]  ">
                 <XMarkIcon className=" ml-[300px] mt-[14px] w-[20px] h-[20px] " />
                 <img className=" ml-[150px] " src={vector} alt="" />

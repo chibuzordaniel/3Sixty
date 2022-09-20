@@ -1,5 +1,5 @@
 import { Cog8ToothIcon, MagnifyingGlassIcon, ArchiveBoxIcon, PlusIcon, EllipsisHorizontalIcon, MinusIcon } from '@heroicons/react/24/outline'
-import Ellipse from  './img/Ellipse 17.png';
+// import Ellipse from  './img/Ellipse 17.png';
 import {TbNotes } from 'react-icons/tb';
 import {BsListCheck, BsTrophy } from 'react-icons/bs';
 import React, { useState} from 'react';
@@ -7,6 +7,7 @@ import Login from '../login/Login';
 import Setup from '../setup/Setup';
 import Notepage from '../note/Notepage';
 import Delete from '../delete/Delete';
+// import  {Link} from 'react-router-dom'
 
 
 
@@ -28,7 +29,7 @@ function Draft () {
             <div  className="  bg-white">
                 <div className="    mx-[35px] ">
                     <div className=' flex gap-[129px]'>
-                        <h1 className=" text-[36px] font-Gruppo h-[80px] pt-[8px] font-normal text-[#000000]  ">  3Si<span className=' absolute -ml-[11px] mt-[6px]'><img className=' h-[13px] w-[13px] ' src={Ellipse} alt="" /></span>xty </h1>
+                        <h1 className=" text-[36px] font-Gruppo h-[80px] pt-[8px] font-normal text-[#000000]  ">3Sixty </h1>
                         <div className=' flex '>
                             <MagnifyingGlassIcon className=' mt-[19px] w-[40px] text-[#DDDDDD] h-[40px] absolute ml-[20px] ' />
                             <input className=' pl-[69px] pt-[px] text-[14px] text-[#777777] mt-[10px] font-Roboto w-[300px] h-[56px]  outline-[#C4C4C4]' placeholder='Search notes' type="text" />
@@ -147,7 +148,7 @@ function Draft () {
                     <div className='  bg-white h-[600px] w-[1120px] ml-[16px] mt-[17px]'>
                         <h1 className='text-[48px] font-Roboto font-bold pt-[41px] pl-[60px] '>Learn Darts</h1>
                         <p className=' pl-[47px] pt-[9px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p>
-                        <p className=' pl-[57px] pt-[10px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p>
+                        {/* <p className=' pl-[57px] pt-[10px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p> */}
                     </div>      
                  
 
@@ -168,9 +169,11 @@ function Draft () {
           < Login visible={togggle} onClose={handleToggleClose} />
           <Setup visible={setup} onClose={handleSetOut} />
           <Notepage visible={note} onClose={handleNoteOut} />
-          <Delete visible />
+          <Delete  />
       </div>
     )
 }
 
 export default Draft;
+
+
