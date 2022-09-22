@@ -8,10 +8,13 @@ import Setup from '../setup/Setup';
 import Notepage from '../note/Notepage';
 import Delete from '../delete/Delete';
 // import  {Link} from 'react-router-dom'
+import {DATA_CARDS} from '../../data/Data';
 
 
 
 function Draft () {
+
+    const [active, setActive] = useState(0)
 
   const [togggle, setToggle] = useState(false);
   const [note, setNote] = useState(false);
@@ -57,7 +60,7 @@ function Draft () {
                             <div className=' grid grid-cols-3   group ml-[30px] hover:border-b-[3px] hover:border-[#356DFB] pb-[15px]'>
                                 <BsTrophy className=' group-hover:text-[#356DFB]  text-[#C4C4C4] mt-[25px] w-[35px] h-[25px]' /> 
                                 <h3 className=' group-hover:text-[#356DFB]  text-[16px] pt-[27px] pl-[px] text-[#C4C4C4] font-Roboto'>Events</h3>
-                                <p className=' group-hover:text-[#356DFB] group-hover:bg-blueaddtext-[15px] text-white bg-[#DDDDDD]  text-center w-[25px] h-[25px] rounded-full mt-[26px] ml-[13px] '>2</p>
+                                <p className=' group-hover:text-[#356DFB] group-hover:bg-blueadd text-[15px] text-white bg-[#DDDDDD]  text-center w-[25px] h-[25px] rounded-full mt-[26px] ml-[13px] '>2</p>
                             </div>
 
                             <div className=' grid grid-cols-3   group ml-[30px] hover:border-b-[3px] hover:border-[#356DFB] pb-[15px]'>
@@ -85,60 +88,26 @@ function Draft () {
                 <div className=' flex '>
                     <div className=' bg-white w-[390px] h-[630px] '>
                     <div className=' overflow-y-scroll w-[390px] h-[580px]'>
-                        <div className=' border-b-[1px] pb-[20px] hover:bg-[#F7FBFD] '>
-                                <div className=' mx-[31px]  '>
+                        <div className=' pb-[20px] '>
+                                <div className='  '>
                                     <div className=' '>
-                                        <h1 className='pt-[42px] text-[#444444]    text-[18px] font-Roboto font-bold'>10 Hours Fasting every week</h1>
-                                        <p className=' text-[#777777] text-[13px] leading-[21px] pt-[4px] font-Roboto '>Incididunt et aliquip sint duis esse. Est duis ea dolor <br /> eiusmod ut elit incididunt irure nisi duis aliquip <br /> anim velit. Officia laborum consectetur quis ea <br /> pariatur proident exercitation. </p>
-                                        <div className=' flex'>
-                                            <h3 className=' bg-bluelight border-2-[#EEEEEE] w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
-                                            <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' onClick={handleToggle} /></h4>
-
+                                        <div className=' '>
+                                            {DATA_CARDS.map((card, index) => (
+                                             <div
+                                                  onClick={() => setActive(index)}
+                                                  className={` pl-10 border-b-2 pb-5  pt-[42px] text-[#444444]  text-[18px] font-Roboto font-bold  cursor-pointer hover:text-red-800 hover:bg-[#F7FBFD]  ${card.id === active+1 && 'text-red-800'}`} key={index}>{card.title}
+                                                    <div> <p className=' text-[#777777] text-[13px] leading-[21px] pt-[4px] font-Roboto '>Incididunt et aliquip sint duis esse. Est duis ea dolor <br /> eiusmod ut elit incididunt irure nisi duis aliquip <br /> anim velit. Officia laborum consectetur quis ea <br /> pariatur proident exercitation. </p></div>
+                                                    <div className=' flex'>
+                                                      <h3 className=' bg-bluelight border-2-[#EEEEEE] w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
+                                                      <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
+                                                      <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' onClick={handleToggle} /></h4>
+                                                    </div>
+                                              </div> 
+                                           ))}
+                                        
+                                        
                                         </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='   border-b-[1px] pb-[20px] hover:bg-[#F7FBFD]'>
-                                <div className=' mx-[31px]  '>
-                                    <div className=' '>
-                                        <h1 className='pt-[42px]  text-[#444444]  text-[18px] font-Roboto font-bold'>Learn Darts</h1>
-                                        <p className=' text-[#777777] text-[13px] leading-[21px] pt-[4px] font-Roboto '>Incididunt et aliquip sint duis esse. Est duis ea dolor <br /> eiusmod ut elit incididunt irure nisi duis aliquip <br /> anim velit. Officia laborum consectetur quis ea <br /> pariatur proident exercitation. </p>
-                                        <div className=' flex'>
-                                            <h3 className=' bg-bluelight w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
-                                            <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' onClick={handleToggle} /></h4>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className=' border-b-[1px] pb-[20px] hover:bg-[#F7FBFD]'>
-                            <div className=' mx-[31px]  '>
-                                <div className=' '>
-                                    <h1 className='pt-[42px] text-[#444444]  text-[18px] font-Roboto font-bold'>Birthday debrief</h1>
-                                    <p className=' text-[#777777] text-[13px] leading-[21px] pt-[4px] font-Roboto '>Incididunt et aliquip sint duis esse. Est duis ea dolor <br /> eiusmod ut elit incididunt irure nisi duis aliquip <br /> anim velit. Officia laborum consectetur quis ea <br /> pariatur proident exercitation. </p>
-                                    <div className=' flex'>
-                                        <h3 className=' bg-bluelight bor w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
-                                        <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                        <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]' onClick={handleToggle}/></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className=' border-b-[1px] pb-[20px] hover:bg-[#F7FBFD]'>
-                                <div className=' mx-[31px]  '>
-                                    <div className=' '>
-                                        <h1 className='pt-[42px] text-[#444444]  text-[18px] font-Roboto font-bold'>Visit Plateau State</h1>
-                                        <p className=' text-[#777777] text-[13px] leading-[21px] pt-[4px] font-Roboto '>Incididunt et aliquip sint duis esse. Est duis ea dolor <br /> eiusmod ut elit incididunt irure nisi duis aliquip <br /> anim velit. Officia laborum consectetur quis ea <br /> pariatur proident exercitation. </p>
-                                        <div className=' flex'>
-                                            <h3 className=' bg-bluelight w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
-                                            <p className=' pl-[69px] pt-[17px] text-[#CCCCCC] text-[13px] font-Roboto '>23 hours ago</p>
-                                            <h4 className=' bg-[#f1f7fa]  w-[50px] h-[26px] rounded-full  text-[#777777] text-[30px] mt-[15px] ml-[19px]  '><EllipsisHorizontalIcon className='p-[10px] -mt-[12px]'onClick={handleToggle} /></h4>
-                                        </div>
-                                  </div>
+                                 </div>
                              </div>
                           </div>
                        </div>
@@ -146,9 +115,9 @@ function Draft () {
                    
                 
                     <div className='  bg-white h-[600px] w-[1120px] ml-[16px] mt-[17px]'>
-                        <h1 className='text-[48px] font-Roboto font-bold pt-[41px] pl-[60px] '>Learn Darts</h1>
-                        <p className=' pl-[47px] pt-[9px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p>
-                        {/* <p className=' pl-[57px] pt-[10px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p> */}
+                        <h1 className='text-[48px] font-Roboto font-bold pt-[41px] pl-[60px] '>{DATA_CARDS[active].title}</h1>
+                        {/* <p className=' pl-[47px] pt-[9px] text-[14px] text-[#777777] font-Roboto leading-[186%]'>{DATA_CARDS[active].description}</p> */}
+                        <p className=' pl-[57px] pt-[10px] text-[14px] text-[#777777] font-Roboto leading-[186%] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip <br /> tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing <br /> adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est <br /> mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia <br /> ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur <br /> nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt <br /> quis.</p>
                     </div>      
                  
 

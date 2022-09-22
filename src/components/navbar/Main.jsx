@@ -6,16 +6,21 @@ import Rectangle3 from './img/Rectangle 3.png';
 import React, { useState }  from 'react';
 import Signup from '../signup/Sigup';
 import Signin from '../signin/Signin';
-
+import {DATA_CARDS} from '../../data/Data';
 
 function  Main  () {
 
-    const [signup, setSignUp] = useState (false)
-    const [signin, setSignIn] = useState (false)
-    const handleClick = () =>  setSignUp (true)
-    const handleClose = ()  =>  setSignUp ( false)
-    const dropDown = ()  =>  setSignIn ( true)
-    const dropClose = ()  =>  setSignIn ( false)
+     const [active, setActive] = useState(0);
+     console.log(active)
+
+    
+
+    const [signup, setSignUp] = useState (false);
+    const [signin, setSignIn] = useState (false);
+    const handleClick = () =>  setSignUp (true);
+    const handleClose = ()  =>  setSignUp ( false);
+    const dropDown = ()  =>  setSignIn ( true);
+    const dropClose = ()  =>  setSignIn ( false);
 
     return (
         <div className="  ">
@@ -67,7 +72,7 @@ function  Main  () {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
             <footer className=' text-center text-[11px] font-Open Sans -mt-[30px] '>All Rights Reserved. 2020 @wiztemple</footer>
             <Signup visible={signup} onClose={handleClose } />
             <Signin visible={signin} onClose={dropClose} />

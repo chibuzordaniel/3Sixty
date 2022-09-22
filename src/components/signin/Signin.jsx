@@ -28,7 +28,7 @@ function Signin ({visible, onClose}) {
       if ( !formState.email || !formState.password ) return setErrorMessage('field is required.') 
       console.log(formState)
       setErrorMessage('')
-      navigate("/Darts")
+      navigate("/Draft")
    }
 
    const windowClose = (e) => {
