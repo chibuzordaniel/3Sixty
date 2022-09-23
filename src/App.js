@@ -8,7 +8,8 @@ function App() {
    return (
     <>
      <Routes>
-        <Route path='' element={<Main />}/>
+       
+        <Route path='/' element={<Main />}/>
         <Route path='' element={<Signin />}/>
         <Route path='' element={ <Signup />}/>
         <Route path='Draft' element={  <Draft/>}/>
@@ -16,6 +17,7 @@ function App() {
         <Route path='' element={  <Setup/>}/>
         <Route path='' element={<Notepage/> }/>
         <Route path='' element={<Delete/> }/>
+
      </Routes>
       
 

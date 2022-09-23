@@ -6,14 +6,9 @@ import Rectangle3 from './img/Rectangle 3.png';
 import React, { useState }  from 'react';
 import Signup from '../signup/Sigup';
 import Signin from '../signin/Signin';
-import {DATA_CARDS} from '../../data/Data';
 
 function  Main  () {
 
-     const [active, setActive] = useState(0);
-     console.log(active)
-
-    
 
     const [signup, setSignUp] = useState (false);
     const [signin, setSignIn] = useState (false);
