@@ -9,11 +9,11 @@ function App() {
     <>
      <Routes>
       
-        <Route path='Main' element={<Main />}/>
+        <Route path='' element={<Main />}/>
         <Route path='' element={<Signin />}/>
         <Route path='' element={ <Signup />}/>
         <Route path='Draft' element={  <Draft/>}/>
-        <Route path=' ' element={  <Login/>}/>
+        <Route path='' element={  <Login/>}/>
         <Route path='' element={  <Setup/>}/>
         <Route path='' element={<Notepage/> }/>
         <Route path='' element={<Delete/> }/>
