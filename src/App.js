@@ -9,14 +9,14 @@ function App() {
     <>
      <Routes>
       
-        <Route path='/Main' element={<Main />}/>
-        <Route path='Signin' element={<Signin />}/>
-        <Route path='Signup' element={ <Signup />}/>
+        <Route path='Main' element={<Main />}/>
+        <Route path='' element={<Signin />}/>
+        <Route path='' element={ <Signup />}/>
         <Route path='Draft' element={  <Draft/>}/>
-        <Route path=' Login' element={  <Login/>}/>
-        <Route path='Setup' element={  <Setup/>}/>
-        <Route path='Notepage' element={<Notepage/> }/>
-        <Route path='Delete' element={<Delete/> }/>
+        <Route path=' ' element={  <Login/>}/>
+        <Route path='' element={  <Setup/>}/>
+        <Route path='' element={<Notepage/> }/>
+        <Route path='' element={<Delete/> }/>
 
      </Routes>
       
