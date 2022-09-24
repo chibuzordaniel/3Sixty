@@ -6,10 +6,8 @@ import React, { useState} from 'react';
 import Login from '../login/Login';
 import Setup from '../setup/Setup';
 import Notepage from '../note/Notepage';
-import Delete from '../delete/Delete';
 import  {Link} from 'react-router-dom'
 import {DATA_CARDS} from '../../data/Data';
-
 
 
 
@@ -138,7 +136,6 @@ function Draft () {
           < Login visible={togggle} onClose={handleToggleClose} />
           <Setup visible={setup} onClose={handleSetOut} />
           <Notepage visible={note} onClose={handleNoteOut} />
-          {/* <Delete  /> */}
       </div>
     )
 }

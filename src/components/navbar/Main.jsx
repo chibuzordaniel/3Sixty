@@ -12,10 +12,8 @@ function  Main  () {
 
     const [signup, setSignUp] = useState (false);
     const [signin, setSignIn] = useState (false);
-
     const handleClick = () =>  setSignUp (true);
     const handleClose = ()  =>  setSignUp ( false);
-    
     const dropDown = ()  =>  setSignIn ( true);
     const dropClose = ()  =>  setSignIn ( false);
 
