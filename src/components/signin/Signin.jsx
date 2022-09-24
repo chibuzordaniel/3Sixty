@@ -11,11 +11,11 @@ function Signin ({visible, onClose}) {
    const [formState, setFormState] = useState({
       email: "",
       password: ""
-    });
-    const [errorMessage, setErrorMessage] = useState('');
+   });
+   const [errorMessage, setErrorMessage] = useState('');
   
   
-    const changeHandler = (e) => {
+   const changeHandler = (e) => {
       setFormState({
         ...formState,
         [e.target.name]: e.target.value
@@ -23,7 +23,7 @@ function Signin ({visible, onClose}) {
       // setFormState("")
     }
   
-    const submitHandler = (e) => {
+   const submitHandler = (e) => {
       e.preventDefault()
       if ( !formState.email || !formState.password ) return setErrorMessage('field is required.') 
       console.log(formState)

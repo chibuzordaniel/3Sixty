@@ -12,9 +12,10 @@ import {DATA_CARDS} from '../../data/Data';
 
 
 
+
 function Draft () {
 
-    const [active, setActive] = useState(0)
+  const [active, setActive] = useState(0)
 
   const [togggle, setToggle] = useState(false);
   const [note, setNote] = useState(false);
@@ -32,7 +33,7 @@ function Draft () {
             <div  className="  bg-white">
                 <div className="    mx-[35px] ">
                     <div className=' flex gap-[129px]'>
-                        <h1 className=" text-[36px] font-Gruppo h-[80px] pt-[8px] font-normal text-[#000000]  "><Link to='Main'> 3Sixty </Link></h1>
+                        <h1 className=" text-[36px] font-Gruppo h-[80px] pt-[8px] font-normal text-[#000000]  "><Link to='/Main'> 3Sixty </Link></h1>
                         <div className=' flex '>
                             <MagnifyingGlassIcon className=' mt-[19px] w-[40px] text-[#DDDDDD] h-[40px] absolute ml-[20px] ' />
                             <input className=' pl-[69px] pt-[px] text-[14px] text-[#777777] mt-[10px] font-Roboto w-[300px] h-[56px]  outline-[#C4C4C4]' placeholder='Search notes' type="text" />
@@ -95,7 +96,7 @@ function Draft () {
                                             {DATA_CARDS.map((card, index) => (
                                              <div
                                                   onClick={() => setActive(index)}
-                                                  className={` pl-10 border-b-2 pb-5  pt-[42px] text-[#444444]  text-[18px] font-Roboto font-bold  cursor-pointer hover:text-red-800 hover:bg-[#F7FBFD]  ${card.id === active+1 && 'text-red-800'}`} key={index}>{card.title}
+                                                  className={` pl-[31px] border-b-2 pb-5  pt-[42px] text-[#444444]  text-[18px] font-Roboto font-bold  cursor-pointer hover:text-red-800 hover:bg-[#F7FBFD]  ${card.id === active+1 && 'text-red-800'}`} key={index}>{card.title}
                                                     <div> <p className=' text-[#777777] text-[13px] leading-[21px] pt-[4px] font-Roboto '>Incididunt et aliquip sint duis esse. Est duis ea dolor <br /> eiusmod ut elit incididunt irure nisi duis aliquip <br /> anim velit. Officia laborum consectetur quis ea <br /> pariatur proident exercitation. </p></div>
                                                     <div className=' flex'>
                                                       <h3 className=' bg-bluelight border-2-[#EEEEEE] w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
@@ -137,7 +138,7 @@ function Draft () {
           < Login visible={togggle} onClose={handleToggleClose} />
           <Setup visible={setup} onClose={handleSetOut} />
           <Notepage visible={note} onClose={handleNoteOut} />
-          <Delete  />
+          {/* <Delete  /> */}
       </div>
     )
 }

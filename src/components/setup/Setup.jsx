@@ -1,5 +1,4 @@
 import { ArchiveBoxIcon, PencilIcon, PrinterIcon, TrashIcon } from "@heroicons/react/24/outline";
-
 function  Setup ({visible, onClose})  {
 
     if (!visible) return null;

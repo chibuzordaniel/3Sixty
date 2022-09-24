@@ -9,7 +9,7 @@ export const DATA_CARDS = [
     },
 
     {
-        id: 2,
+        id :2,
         tag:'personal',
         title: 'Learn Darts ',
         description: 'Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliqui ',
