@@ -8,13 +8,15 @@ import Setup from '../setup/Setup';
 import Notepage from '../note/Notepage';
 import  {Link} from 'react-router-dom'
 import {DATA_CARDS} from '../../data/Data';
+import Delete from '../delete/Delete';
 
 
 
 function Draft () {
 
   const [active, setActive] = useState(0)
-
+  
+  const [del, setDel] = useState(false)
   const [togggle, setToggle] = useState(false);
   const [note, setNote] = useState(false);
   const [setup, setSetUp ] = useState(false);
@@ -24,6 +26,10 @@ function Draft () {
   const handleNoteOut = () => setNote(false);
   const handleSetUp = () => setSetUp(true);
   const handleSetOut = () => setSetUp(false);
+  const handledel = () => setDel(true)
+  const handledelOut = () => setDel(false)
+  
+  
     
 
     return(
@@ -46,7 +52,7 @@ function Draft () {
                         <div className=' flex'>
                             <div className=' grid  grid-cols-3  group  hover:border-b-[3px] hover:border-[#356DFB] pb-[15px] '>
                                 <TbNotes className=' group-hover:text-[#356DFB]  text-[#C4C4C4] mt-[20px] w-[31px] h-[35px]'  /> 
-                                <h3 className=' group-hover:text-[#356DFB]  text-[16px] pt-[27px] pl-[px] text-[#C4C4C4] font-Roboto'>Notes</h3>
+                                <h3 className=' group-hover:text-[#356DFB]  text-[16px] pt-[27px] pl-[px] text-[#C4C4C4] font-Roboto' >Notes</h3>
                                 <p className=' group-hover:text-[#356DFB] group-hover:bg-blueadd text-[15px] text-white bg-[#DDDDDD] text-center w-[25px] h-[25px] rounded-full mt-[26px] ml-[13px] '>10</p>
                             </div>
 
@@ -88,13 +94,13 @@ function Draft () {
                     <div className=' bg-white w-[390px] h-[630px] '>
                     <div className=' overflow-y-scroll w-[390px] h-[580px]'>
                         <div className=' pb-[20px] '>
-                                <div className='  '>
-                                    <div className=' '>
-                                        <div className=' '>
+                                <div className=''>
+                                    <div className=''>
+                                        <div className=''>
                                             {DATA_CARDS.map((card, index) => (
                                              <div
                                                   onClick={() => setActive(index)}
-                                                  className={` pl-[31px] border-b-2 pb-5  pt-[42px] text-[#444444]  text-[18px] font-Roboto font-bold  cursor-pointer hover:text-red-800 hover:bg-[#F7FBFD]  ${card.id === active+1 && 'text-red-800'}`} key={index}>{card.title}
+                                                  className={` pl-[31px] border-b-2 pb-5  pt-[42px] text-[#444444]  text-[18px] font-Roboto font-bold  cursor-pointer  hover:bg-[#F7FBFD]  ${card.id === active+1 && 'bg-[#F7FBFD]'}`} key={index}>{card.title}
                                                     <div> <p className=' text-[#777777] text-[13px] leading-[21px] pt-[4px] font-Roboto '>Incididunt et aliquip sint duis esse. Est duis ea dolor <br /> eiusmod ut elit incididunt irure nisi duis aliquip <br /> anim velit. Officia laborum consectetur quis ea <br /> pariatur proident exercitation. </p></div>
                                                     <div className=' flex'>
                                                       <h3 className=' bg-bluelight border-2-[#EEEEEE] w-[90px] h-[32px] mt-[12px] py-[5px] text-center text-[13px] text-[#356DFB] rounded-full font-Roboto '>Personal</h3>
@@ -103,7 +109,6 @@ function Draft () {
                                                     </div>
                                               </div> 
                                            ))}
-                                        
                                         
                                         </div>
                                  </div>
@@ -134,8 +139,9 @@ function Draft () {
               </div>
           </div>
           < Login visible={togggle} onClose={handleToggleClose} />
-          <Setup visible={setup} onClose={handleSetOut} />
+          <Setup visible={setup} onClick={handledel}  onClose={handleSetOut} />
           <Notepage visible={note} onClose={handleNoteOut} />
+          <Delete visible={del} onClose={handledelOut}  />
       </div>
     )
 }
