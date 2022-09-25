@@ -17,6 +17,7 @@ function App() {
         <Route path='' element={  <Setup/>}/>
         <Route path='' element={<Notepage/> }/>
         <Route path='' element={<Delete/> }/>
+        <Route path='' element={<Delete/> }/>
 
      </Routes>
       
