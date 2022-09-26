@@ -1,6 +1,7 @@
-import { Main, Signup, Signin, Draft, Login, Setup, Notepage, Delete  } from './components'
+import { Main, Signup, Signin, Draft, Login, Setup, Notepage, Delete, Edit  } from './components'
 import './App.css';
 import {Route, Routes} from 'react-router-dom'
+
 
 
 
@@ -18,7 +19,7 @@ function App() {
         <Route path='' element={<Notepage/> }/>
         <Route path='' element={<Delete/> }/>
         <Route path='' element={<Delete/> }/>
-
+        <Route path='' element={<Edit/> }/>
      </Routes>
       
 

@@ -9,6 +9,7 @@ import Notepage from '../note/Notepage';
 import  {Link} from 'react-router-dom'
 import {DATA_CARDS} from '../../data/Data';
 import Delete from '../delete/Delete';
+import Edit from '../edit/Edit';
 
 
 
@@ -20,14 +21,20 @@ function Draft () {
   const [togggle, setToggle] = useState(false);
   const [note, setNote] = useState(false);
   const [setup, setSetUp ] = useState(false);
+  const [edit, setEdit] = useState(false)
+
   const handleToggle = () => setToggle(true);
-  const handleToggleClose = () => setToggle(false);
   const handleNote = () => setNote(true);
-  const handleNoteOut = () => setNote(false);
-  const handleSetUp = () => setSetUp(true);
-  const handleSetOut = () => setSetUp(false);
   const handledel = () => setDel(true)
+  const handleSetUp = () => setSetUp(true);
+  const handleEdit = () =>  setEdit(true)
+
+  
+  const handleToggleClose = () => setToggle(false);
+  const handleNoteOut = () => setNote(false);
+  const handleSetOut = () => setSetUp(false);
   const handledelOut = () => setDel(false)
+  const handleEditOut = () => setEdit(false)
   
   
     
@@ -139,9 +146,10 @@ function Draft () {
               </div>
           </div>
           < Login visible={togggle} onClose={handleToggleClose} />
-          <Setup visible={setup} onClick={handledel}  onClose={handleSetOut} />
+          <Setup visible={setup} handD={handledel}  handE={handleEdit}  onClose={handleSetOut} />
           <Notepage visible={note} onClose={handleNoteOut} />
           <Delete visible={del} onClose={handledelOut}  />
+          <Edit visible={edit} onClose={handleEditOut} />
       </div>
     )
 }
