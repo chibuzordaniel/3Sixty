@@ -3,6 +3,7 @@ import vector from './img/Vector (3).png'
 
 function  Delete ({visible, onClose}) {
 
+
     if (!visible) return null;
 
     return(
@@ -13,7 +14,7 @@ function  Delete ({visible, onClose}) {
                 <h3 className=" text-[14px] pl-[40px] pt-[14px]">Are you sure you want to delete this note?</h3>
                 <div className=" flex mt-[45px] ml-[52px]">
                     <button className=" w-[110px] h-[41px] border border-[#C4C4C4] text-[#777777] text-center text-[16px]  rounded-full" onClick={onClose}>Cancel</button>
-                    <button className=" w-[110px] h-[41px] border  ml-[15px] text-[#F13843] bg-redlight text-center text-[16px] rounded-full">Delete</button>
+                    <button className=" w-[110px] h-[41px] border  ml-[15px] text-[#F13843] bg-redlight text-center text-[16px] rounded-full" >Delete</button>
                 </div>
             </div>
         </div>
