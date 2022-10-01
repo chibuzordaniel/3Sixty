@@ -15,26 +15,26 @@ import Edit from '../edit/Edit';
 
 function Draft () {
 
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(0);
   
-  const [del, setDel] = useState(false)
-  const [togggle, setToggle] = useState(false);
+  const [del, setDel] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const [note, setNote] = useState(false);
   const [setup, setSetUp ] = useState(false);
-  const [edit, setEdit] = useState(false)
+  const [edit, setEdit] = useState(false);
 
   const handleToggle = () => setToggle(true);
   const handleNote = () => setNote(true);
-  const handledel = () => setDel(true)
+  const handledel = () => setDel(true);
   const handleSetUp = () => setSetUp(true);
-  const handleEdit = () =>  setEdit(true)
+  const handleEdit = () =>  setEdit(true);
 
   
   const handleToggleClose = () => setToggle(false);
   const handleNoteOut = () => setNote(false);
   const handleSetOut = () => setSetUp(false);
-  const handledelOut = () => setDel(false)
-  const handleEditOut = () => setEdit(false)
+  const handledelOut = () => setDel(false);
+  const handleEditOut = () => setEdit(false);
   
   
     
@@ -103,7 +103,7 @@ function Draft () {
                         <div className=' pb-[20px] '>
                                 <div className=''>
                                     <div className=''>
-                                        <div className=''>
+                                        <div className=''> 
                                             {DATA_CARDS.map((card, index) => (
                                              <div
                                                   onClick={() => setActive(index)}
@@ -145,7 +145,7 @@ function Draft () {
                    </div>
               </div>
           </div>
-          < Login visible={togggle} onClose={handleToggleClose} />
+          < Login visible={toggle} onClose={handleToggleClose} />
           <Setup visible={setup} handD={handledel  } handE={handleEdit}   onClose={handleSetOut} />
           <Notepage visible={note} onClose={handleNoteOut} />
           <Delete visible={del} onClose={handledelOut}  />
