@@ -145,7 +145,7 @@ function Draft () {
                    </div>
               </div>
           </div>
-          < Login visible={toggle} onClose={handleToggleClose} />
+          <Login visible={toggle} handD={handledel  } handE={handleEdit} onClose={handleToggleClose} />
           <Setup visible={setup} handD={handledel  } handE={handleEdit}   onClose={handleSetOut} />
           <Notepage visible={note} onClose={handleNoteOut} />
           <Delete visible={del} onClose={handledelOut}  />
