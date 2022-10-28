@@ -19,7 +19,7 @@ function  Main  () {
 
     return (
         <div className="  ">
-            <div className=' max-w-[1400px]  mx-auto '>
+            <div className=' max-w-[1200px]  mx-auto '>
                 <div className=" pt-[15px] flex justify-between">
                     <h1 className=" text-[36px] font-Gruppo font-semibold">3Sixty</h1>
                     <div className=" pt-[12px] ">
@@ -29,7 +29,7 @@ function  Main  () {
                 </div>
             </div>
 
-            <div className=' max-w-[1400px]  mx-auto '>
+            <div className=' max-w-[1200px]  mx-auto '>
                 <div className=' flex '>
                     <div className=" pt-[44px]">
                         <h1 className=" text-[48px] font-Roboto  font-bold leading-[65px] ">You can’t really <br></br> manage time, but you <br></br>  can take small steps <br></br> that counts on a long <br></br> run.</h1>
@@ -40,7 +40,7 @@ function  Main  () {
                     </div>
                     
                     <div>
-                        <div className=' ml-[439px] mt-[25px]'>
+                        <div className=' ml-[309px] mt-[25px]'>
                             <img className=' ' src={Component12} alt="" />
                             <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
                                 <img className='w-[237px] h-[175px]' src={Rectangle1} alt="" />
@@ -49,7 +49,7 @@ function  Main  () {
                         </div>
 
                         <div className=' flex  '>
-                                <div className=' ml-[230px]  -mt-[90px] '>
+                                <div className=' ml-[150px]  -mt-[90px] '>
                                     <img className=' ' src={Component12} alt="" />
                                     <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
                                         <img className=' w-[237px] h-[175px] ' src={Rectangle2} alt="" />
@@ -57,7 +57,7 @@ function  Main  () {
                                     </div> 
                                 </div>
 
-                                <div className=' mt-[55px] ml-[159px] '>
+                                <div className=' mt-[55px] ml-[50px] '>
                                     <img className='  ' src={Component12} alt="" />
                                     <div className=' bg-white h-[240px] w-[237px]  ml-[30px] shadow relative bottom-[120px]'>
                                         <img className=' w-[237px] h-[175px] -mt-[145px]' src={Rectangle3} alt="" />

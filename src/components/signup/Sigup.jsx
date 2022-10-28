@@ -4,58 +4,38 @@ import line1 from './img/Line 20.png'
 import {FcGoogle } from 'react-icons/fc'
 // import {useNavigate} from 'react-router-dom'
 import { mutation } from '../../helpers/api/mutation'
+import { useFormik } from 'formik'
 
 
-function Signup ({visible, onClose}) {
+function Signup () {
 
-   // const navigate = useNavigate()
-   const [formState, setformState] = useState ({
-      name: "",
-      username: "", 
-      email: "",
-      password: "",
+ 
 
-   });
-   
-   // console.log(formState)
-   const [errorMessage, ] = useState("");
+  
+ 
+  const formik = useFormik({
+   initialValues: {
+      name: '',
+      username: '',
+      email: '',
+      password: '',
+   },
+   onSubmit: values => {
+       console.log(values)
+    },
 
-   function createUser  ()  {
-      return mutation('https://seedd-gen-api.herokuapp.com/api/v1/user/register', formState)
-      
-   }
-
-   const changeHandler = (e) => {
-      setformState({
-         ...formState,
-         [e.target.name]: e.target.value
-      })
-   }
-     console.log(formState)
-   const submitHandler = (e) => {
-      e.preventDefault()
-      createUser()
-      // if (!formState.name || !formState.username || !formState.email ||  !formState.password) return setErrorMessage('field is required.');
-      // console.log(formState)
-      // setErrorMessage('')
-      // navigate('/Draft')
-   }
-
-   useEffect(() => {
-      createUser()
-   }, [])
-
+  });
    
   
 
-   if (!visible) return null;
+  
 
    return (
-     <div  className=' bg-[#00000033] w-full   h-full  absolute top-0 '>
+     <div  className=' bg-[#00000033] w-full   h-full  absolute top-0 hidden  '>
        <div className=' absolute top-[22px] left-[600px]  '>
         <div className=" bg-white rounded-2xl shadow-2xl h-[719px] w-[365px]   ">
            <div className=''>
-               <img className='relative left-[330px] top-[15px]'  src={Vector1} alt="" onClick={onClose} />
+               <img className='relative left-[330px] top-[15px]'  src={Vector1} alt=""  />
                <h1 className='text-[36px] text-center font-Gruppo font-normal pt-[15px]  '>3Sixty</h1>
                <h2 className='text-[20px] text-[#356DFB] font-Roboto pl-[26px] pt-[10px] leading-[23px] font-bold  '>Create <br /> your account</h2>
                <p className='text-[13px] text-[#777777] pl-[26px] pt-[10px]  '>Enter your personal details to start your journey today</p>
@@ -71,16 +51,16 @@ function Signup ({visible, onClose}) {
                   <img className='w-[46px] ml-[13px] h-[1px] mt-[12px]' src={line1} alt="" />
                </div>
 
-               <form onSubmit={submitHandler}>
+               <form onSubmit={formik.handleSubmit} >
                   <div>
-                     <input onChange={changeHandler} value={formState.name} className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[10px] w-[314px] h-[46px] ml-[26px] pl-[17px]  '  placeholder='Name' type="name" name='name'  />
-                     <div  className=' text-sm text-red-500  pl-[27px] '>{errorMessage}</div>
-                     <input onChange={changeHandler} value={formState.username} className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[18px] w-[314px] h-[46px] ml-[26px] pl-[17px] '  placeholder='Username' type="username" name='username' />
-                     <div className=' text-sm text-red-500 pl-[27px]'>{errorMessage}</div>
-                     <input onChange={changeHandler} value={formState.email} className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[18px] w-[314px] h-[46px] ml-[26px] pl-[17px] '  placeholder='E-mail' type="email" name='email' />
-                      <div className='text-sm text-red-500 pl-[27px]'>{errorMessage}</div>
-                     <input onChange={changeHandler} value={formState.password} className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[18px] w-[314px] h-[46px] ml-[26px] pl-[17px]  '  placeholder='Password' type="password" name='password' />
-                     <div className=' text-sm text-red-500 pl-[27px]'>{errorMessage}</div>
+                     <input    onChange={formik.handleChange} value={formik.values.name}   className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[10px] w-[314px] h-[46px] ml-[26px] pl-[17px]  '  placeholder='Name' type="text" name='name' id='name'  />
+                     <div  className=' text-sm text-red-500  pl-[27px] '></div>
+                     <input    onChange={formik.handleChange} value={formik.values.username}  className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[18px] w-[314px] h-[46px] ml-[26px] pl-[17px] '  placeholder='Username' type="text" name='username' id='username' />
+                     <div className=' text-sm text-red-500 pl-[27px]'></div>
+                     <input    onChange={formik.handleChange}     value={formik.values.email}   className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[18px] w-[314px] h-[46px] ml-[26px] pl-[17px] '  placeholder='E-mail' type="email" name='email' id='email' />
+                      <div className='text-sm text-red-500 pl-[27px]'></div>
+                     <input     onChange={formik.handleChange}     value={formik.values.password}  className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[18px] w-[314px] h-[46px] ml-[26px] pl-[17px]  '  placeholder='Password' type="password" name='password' id='password' />
+                     <div className=' text-sm text-red-500 pl-[27px]'></div>
                      <button type='submit' className=' bg-[#356DFB]  w-[314px] h-[46px] rounded-full ml-[26px] text-[16px] text-white mt-[17px] font-Roboto '> Sign Up</button>
                      <p className=' text-center text-[12px] pt-[15px] font-Roboto '>Already have an account? <span className=' text-[#356DFB] cursor-pointer'>Sign in here</span></p>
                   </div>
