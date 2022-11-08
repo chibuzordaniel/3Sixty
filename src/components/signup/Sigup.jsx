@@ -53,7 +53,7 @@ function Signup () {
 
                <form onSubmit={formik.handleSubmit} >
                   <div>
-                     <input    onChange={formik.handleChange} value={formik.values.name}   className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[10px] w-[314px] h-[46px] ml-[26px] pl-[17px]  '  placeholder='Name' type="text" name='name' id='name'  />
+                     <input  onChange={formik.handleChange} value={formik.values.name}   className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[10px] w-[314px] h-[46px] ml-[26px] pl-[17px]  '  placeholder='Name' type="text" name='name' id='name'  />
                      <div  className=' text-sm text-red-500  pl-[27px] '></div>
                      <input    onChange={formik.handleChange} value={formik.values.username}  className=' border  outline-none border-[#DEDFEC] text-[14px] text-[#BDBEC1]  bg-[#f9f9f9]  font-Roboto   rounded-xl mt-[18px] w-[314px] h-[46px] ml-[26px] pl-[17px] '  placeholder='Username' type="text" name='username' id='username' />
                      <div className=' text-sm text-red-500 pl-[27px]'></div>
